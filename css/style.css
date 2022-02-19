@@ -180,37 +180,46 @@ body._lock {
   font-weight: 700;
   text-transform: uppercase;
 }
-
+.main__slider {
+}
+.slider__wraper {
+	width: 100%;
+}
 .slider__item {
-  position: relative;
+	margin: 0 auto;
+	max-width: 100%;
+	position: relative;
 }
-
-.image__wraper {
-  position: absolute;
-}
-
-.image__block {
-  position: relative;
-  overflow: hidden;
-  padding: 0px 0px 58% 0px;
-  overflow: hidden;
-  background: url(..img/);
-}
-
-.item__image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .item__content {
-  position: relative;
+	
 }
+.__container {
+}
+.content__block {
+}
+.content__title {
+}
+.title__car {
+}
+.coast__rental {
+}
+.coast {
+}
+.btn__link {
+}
+.image__block {
+	padding:0px 0px 58% 0px;
+	width: 100%;
+	height: 100%;
+	
 
+}
+.image__block picture source{
+	width: 100%;
+	height: 100%;
+	
+
+}
 .content__block {
   position: absolute;
   margin: 400px 0px 0px 0px;
