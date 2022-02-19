@@ -180,46 +180,36 @@ body._lock {
   font-weight: 700;
   text-transform: uppercase;
 }
-.main__slider {
-}
-.slider__wraper {
-	width: 100%;
-}
+
 .slider__item {
-	margin: 0 auto;
-	max-width: 100%;
-	position: relative;
+  position: relative;
 }
-.item__content {
-	
+
+.image__wraper {
+  position: absolute;
 }
-.__container {
-}
-.content__block {
-}
-.content__title {
-}
-.title__car {
-}
-.coast__rental {
-}
-.coast {
-}
-.btn__link {
-}
+
 .image__block {
-	padding:0px 0px 58% 0px;
-	width: 100%;
-	height: 100%;
-	
-
+  position: relative;
+  overflow: hidden;
+  padding: 0px 0px 58% 0px;
+  overflow: hidden;
 }
-.image__block picture source{
-	width: 100%;
-	height: 100%;
-	
 
+.item__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
+.item__content {
+  position: relative;
+}
+
 .content__block {
   position: absolute;
   margin: 400px 0px 0px 0px;
@@ -824,6 +814,10 @@ form > .btn__link {
     padding: 5px 0px 5px 0px;
   }
 
+  .image__block {
+    padding: 0px 0px 100% 0px;
+  }
+
   .questions__content::after {
     display: none;
   }
@@ -839,9 +833,21 @@ form > .btn__link {
   }
 }
 
+@media (max-width: 460px) {
+  .image__block {
+    padding: 0px 0px 140% 0px;
+  }
+}
+
 @media (max-width: 430px) {
   .questions__content::before {
     left: 38%;
+  }
+}
+
+@media (max-width: 320px) {
+  .image__block {
+    padding: 0px 0px 150% 0px;
   }
 }
 
