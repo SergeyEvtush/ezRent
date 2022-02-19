@@ -260,13 +260,14 @@ body._lock {
   color: #fff;
   padding: 0px 32px;
   margin: 0px 0px 30px 0px;
-  transition: all 0.8s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
   text-transform: uppercase;
 }
 
 .btn__link:hover {
-  transform: scale(1.1);
-  box-shadow: 4px 4px 2px 2px rgba(15, 128, 18, 0.2);
+/*   transform: scale(1.1);
+  box-shadow: 4px 4px 2px 2px rgba(15, 128, 18, 0.2); */
+  background: #000;
 }
 
 .rental__sale {
@@ -335,7 +336,16 @@ form {
   max-width: 100%;
   flex-wrap: wrap;
 }
-
+form .btn__link{
+background: #000;
+}
+form .btn__link:hover{
+	background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
+	transition: all 0.3s ease-in-out 0s;
+	}
+.form .btn__link{
+	background: #000;
+	}
 .form__input {
   border: 1px solid rgba(0, 0, 0, 0.521);
   border-radius: 40px;
