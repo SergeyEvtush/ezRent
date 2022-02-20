@@ -124,17 +124,17 @@ body._lock {
   padding: 0px 10px 0px 10px;
 }
 
-.no-webp ._phone{
+._phone{
   background: url(../img/topHeaderImg/phone_1.png) 0 0/16px no-repeat; }
 
 ._phone {
   text-transform: uppercase;
 }
 
-.no-webp ._email{
+._email{
   background: url(../img/topHeaderImg/email_2.png) 0 0/16px no-repeat; }
 
-.no-webp ._operating{
+._operating{
   background: url(../img/topHeaderImg/watches_1.png) 0 0/16px no-repeat; }
 
 ._operating {
@@ -143,7 +143,7 @@ body._lock {
 
 .title__header {
   background: #fff;
-  padding: 23px 0px 23px 0px;
+  padding: 15px 0px 15px 0px;
   box-shadow: 0 3px 5px rgba(1, 16, 25, 0.1);
 }
 
@@ -200,7 +200,7 @@ body._lock {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -265,7 +265,7 @@ body._lock {
 }
 
 .btn__link:hover {
-/*   transform: scale(1.1);
+  /*   transform: scale(1.1);
   box-shadow: 4px 4px 2px 2px rgba(15, 128, 18, 0.2); */
   background: #000;
 }
@@ -336,18 +336,22 @@ form {
   max-width: 100%;
   flex-wrap: wrap;
 }
-form .btn__link{
-background: #000;
-padding:5px 75px 5px 75px;
-border-radius: 40px;
+
+form .btn__link {
+  background: #000;
+  padding: 5px 75px 5px 75px;
+  border-radius: 40px;
 }
-form .btn__link:hover{
-	background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
-	transition: all 0.3s ease-in-out 0s;
-	}
-.form .btn__link{
-	background: #000;
-	}
+
+form .btn__link:hover {
+  background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.form .btn__link {
+  background: #000;
+}
+
 .form__input {
   border: 1px solid rgba(0, 0, 0, 0.521);
   border-radius: 40px;
@@ -381,7 +385,7 @@ form > .btn__link {
 }
 
 .advantages__content > .sale__title::before {
-  background: #61a946;
+  background: #61a947;
 }
 
 .advantages__content > .sale__title::after {
@@ -397,30 +401,30 @@ form > .btn__link {
 }
 
 .card-block__item {
-  padding: 20px 5px 20px 5px;
+  padding: 20px 0px 20px 0px;
   display: flex;
-  max-width: 300px;
+  max-width: 280px;
 }
 
 .card-block__item:not(last-child) {
-  margin: 10px 45px 0px 0px;
+  margin: 10px 15px 0px 0px;
 }
 
 .card-block__item:last-child {
   margin: 10px 0px 0px 0px;
 }
 
-.no-webp .card-block__item:last-child .card-block__image{
-  background: url(../img/advantages/safety.png) center 4px/70px no-repeat; }
+ .card-block__item:last-child .card-block__image{
+  background: url(../img/advantages/icon-securety.png) center 15px/45px no-repeat; }
 
-.no-webp .card-block__item:nth-child(3) .card-block__image{
-  background: url(../img/advantages/lightning.png) center 12px/50px no-repeat; }
+ .card-block__item:nth-child(3) .card-block__image{
+  background: url(../img/advantages/lightning1.png) center 12px/50px no-repeat; }
 
-.no-webp .card-block__item:first-child .card-block__image{
-  background: url(../img/advantages/dollar.png) center 18px/35px no-repeat; }
+.card-block__item:first-child .card-block__image{
+  background: url(../img/advantages/dollar1.png) center 18px/35px no-repeat; }
 
-.no-webp .card-block__item:nth-child(2) .card-block__image{
-  background: url(../img/advantages/loon-icon.png) center -6px/90px no-repeat; }
+ .card-block__item:nth-child(2) .card-block__image{
+  background: url(../img/advantages/icon-car.png) 10px 25px/50px no-repeat; }
 
 .card-block__image {
   max-width: 125px;
@@ -449,6 +453,7 @@ form > .btn__link {
   margin: 0px 0px 4px 0px;
   letter-spacing: 1px;
   color: #222222;
+  font-size: 13px;
 }
 
 .insurance__wraper {
@@ -487,13 +492,13 @@ form > .btn__link {
 }
 
 .questions__content {
-  max-width: 70%;
+  max-width: 80%;
   align-items: center;
   justify-content: space-between;
   display: flex;
   margin: -40px auto 0px;
   text-align: center;
-  padding: 25px;
+  padding: 25px 0;
   background: #fff;
   box-shadow: 0 3px 5px rgba(1, 16, 25, 0.1);
   border-radius: 20px;
@@ -511,8 +516,12 @@ form > .btn__link {
   right: 50%;
 }
 
-.no-webp .questions__content::before{
-  background: url(../img/quessions/hours.png) center/70px no-repeat; }
+.questions__content::before{
+  background: #fff url(../img/quessions/rescServ.png) center/70px no-repeat; }
+
+.questions__content::before {
+  border-radius: 50%;
+}
 
 .questions__content::before {
   content: "";
@@ -530,11 +539,17 @@ form > .btn__link {
   text-transform: uppercase;
   color: #222222;
   font-weight: 700;
-  margin: 5px 10px 5px 10px;
 }
 
-.no-webp .questions__link:first-child::before{
-  background: url(../img/quessions/phone_1.png) center/20px no-repeat; }
+.questions__link:first-child {
+  margin: 5px 20px 5px 3px;
+}
+
+.questions__link:last-child {
+  margin: 5px 3px 5px 20px;
+}
+
+
 
 .questions__link:first-child::before {
   content: "";
@@ -576,6 +591,12 @@ form > .btn__link {
 .rental__btn .btn__link {
   border-radius: 0px;
 }
+
+/*  @media (max-width: 1170px) {
+	.card-block__item:last-child {
+	  margin: 10px 45px 0px 0px;
+	}
+ } */
 
 @media (max-width: 1300px) {
   .title__header {
@@ -676,12 +697,6 @@ form > .btn__link {
 
   .questions__content {
     padding: 35 calc(3px + 22 * (100vw - 320px) / 880);
-  }
-}
-
-@media (max-width: 1170px) {
-  .card-block__item:last-child {
-    margin: 10px 45px 0px 0px;
   }
 }
 
@@ -822,61 +837,44 @@ form > .btn__link {
     font-size: 24px;
   }
 
-  .title__header {
-    padding: 5px 0px 5px 0px;
-  }
-
   .image__block {
     padding: 0px 0px 100% 0px;
   }
+}
 
-  .questions__content::after {
-    display: none;
-  }
-
-  .questions__content {
+@media (max-width: 540px) {
+  form {
     flex-direction: column;
   }
-}
 
-@media (max-width: 550px) {
   .questions__content::before {
-    left: 40%;
+    left: 41%;
   }
 }
 
-@media (max-width: 460px) {
-  .image__block {
-    padding: 0px 0px 140% 0px;
+@media (max-width: 500px) {
+  .questions__content {
+    max-width: 95%;
+  }
+
+  .questions__link {
+    font-size: calc(12px + 16 * (100vw - 320px) / 880);
   }
 }
 
 @media (max-width: 430px) {
-  .questions__content::before {
-    left: 38%;
-  }
-}
-
-@media (max-width: 320px) {
   .image__block {
     padding: 0px 0px 150% 0px;
   }
 }
 
-.webp ._phone{ background: url(../img/topHeaderImg/phone_1.webp) 0 0/16px no-repeat; }
+@media (max-width: 400px) {
+  form {
+    flex-direction: column;
+  }
 
-.webp ._email{ background: url(../img/topHeaderImg/email_2.webp) 0 0/16px no-repeat; }
+  .questions__content::before {
+    left: 39%;
+  }
+}
 
-.webp ._operating{ background: url(../img/topHeaderImg/watches_1.webp) 0 0/16px no-repeat; }
-
-.webp .card-block__item:last-child .card-block__image{ background: url(../img/advantages/safety.webp) center 4px/70px no-repeat; }
-
-.webp .card-block__item:nth-child(3) .card-block__image{ background: url(../img/advantages/lightning.webp) center 12px/50px no-repeat; }
-
-.webp .card-block__item:first-child .card-block__image{ background: url(../img/advantages/dollar.webp) center 18px/35px no-repeat; }
-
-.webp .card-block__item:nth-child(2) .card-block__image{ background: url(../img/advantages/loon-icon.webp) center -6px/90px no-repeat; }
-
-.webp .questions__content::before{ background: url(../img/quessions/hours.webp) center/70px no-repeat; }
-
-.webp .questions__link:first-child::before{ background: url(../img/quessions/phone_1.webp) center/20px no-repeat; }
