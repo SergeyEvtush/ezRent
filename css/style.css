@@ -260,7 +260,7 @@ body._lock {
   color: #fff;
   padding: 0px 32px;
   margin: 0px 0px 30px 0px;
-  transition: all 0.3s ease-in-out 0s;
+  /* transition: all 0.3s ease-in-out 0s; */
   text-transform: uppercase;
 }
 
@@ -432,8 +432,7 @@ form > .btn__link {
 
 .card-block__image img {
   width: 100%;
-  /* 	background: linear-gradient(45deg, #f7f4f4 25%, transparent 25%, transparent 75%, #dfdcdc 75%), linear-gradient(45deg, #c7c5c5 25%, transparent 25%, transparent 75%, #bdbaba 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #6d6d69, #fafafa);
-  	background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%; */
+ 
 }
 
 .card-block__content {
@@ -466,8 +465,56 @@ form > .btn__link {
   margin: 0 auto;
   text-align: center;
   padding: 30px 5px 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  
 }
-
+.insurance__container::before{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 120%;
+	position: absolute;
+	background:rgba(90, 90, 90, 0.288);
+	top: 0;
+	left: 50%;
+}
+.insurance-container__block{
+	
+	flex: 1 1 50%;
+}
+.block__map {
+	max-width: 100%;
+	padding:0px 15px 0px 15px;
+	position: relative;
+}
+.block__content-insurance{
+	padding:30px 15px 0px 50px;
+}
+.map__image {
+	width: 100%;
+	padding:0px 20px 0px 0px;
+	
+}
+.map__content {
+	position: absolute;
+	top:35%;
+	left: 30%;
+}
+.image__title {
+	font-size: 50px;
+	color: #fff;
+}
+.image__title span{
+	color: #61a946;
+}
+.image__paragraph{
+	max-width: 300px;
+	padding:10px 35px 0px 10px;
+	text-transform: uppercase;
+}
 .insurance__subtitle-block {
   margin: 0px 0px 10px 0px;
 }
@@ -476,9 +523,11 @@ form > .btn__link {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.13;
+  text-align: left;
 }
 
 .insurance__title-block h2 {
+	text-align: left;
   font-size: 30px;
   line-height: 1.13;
   color: #fff;
@@ -487,51 +536,70 @@ form > .btn__link {
 }
 
 .insurance__paragraph-block p {
+	text-align: left;
   line-height: 1.12;
   margin: 0px 0px 30px 0px;
 }
-
-.questions__content {
-  max-width: 80%;
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  margin: -40px auto 0px;
-  text-align: center;
-  padding: 25px 0;
-  background: #fff;
-  box-shadow: 0 3px 5px rgba(1, 16, 25, 0.1);
-  border-radius: 20px;
-  position: relative;
+@media(max-width:767px){
+	.insurance__container::before{
+		display: none;
+	}
+	.insurance__container {
+		padding-top: 0px;
+		flex-direction: column;
+		
+	 }
+	 .insurance__paragraph-block p,.insurance__title-block h2,.insurance__subtitle-block h3{
+		 text-align: center;
+	 }
+}
+.questions__container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: -2% 10px 0px 10px;
+	max-width: 100%;
 }
 
-.questions__content::after {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 60%;
-  background: rgba(90, 90, 90, 0.288);
-  position: absolute;
-  bottom: 0%;
-  right: 50%;
-}
-
-.questions__content::before{
-  background: #fff url(../img/quessions/rescServ.png) center/70px no-repeat; }
-
-.questions__content::before {
-  border-radius: 50%;
-}
-
-.questions__content::before {
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  left: 45%;
-  top: -43%;
-}
+		
+	.questions__content {
+		/* max-width: 70%; */
+		align-items: center;
+		justify-content: space-between;
+		display: flex;
+		margin: -60px auto 0px;
+		text-align: center;
+		padding: 20px 25px;
+		background: #fff;
+		box-shadow: 0 3px 5px rgba(1, 16, 25, 0.1);
+		border-radius: 5px;
+		position: relative;
+		flex: 1 1 100%;
+		flex-wrap: wrap;
+	 }
+	 .questions__container::before{
+		content: "";
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+			border-radius: 50%;
+			background: #fff url(../img/quessions/rescServ.png) center/70px no-repeat; 
+	      z-index: 20;
+	      margin: 0px auto; 
+		   align-self: flex-start;
+		    border-radius: 50%;
+		}
+		.questions__container::after{
+			content: "";
+			display: inline-block;
+			width: 1px;
+			height: 20px;
+			background: rgba(90, 90, 90, 0.288);
+			margin: -20px auto; 
+			z-index: 30;
+		   
+		}
 
 .questions__link {
   display: inline-block;
@@ -539,25 +607,75 @@ form > .btn__link {
   text-transform: uppercase;
   color: #222222;
   font-weight: 700;
+  padding: 0px 60px 0px 60px;
+ text-align: center;
+ max-width: 400px;
 }
 
-.questions__link:first-child {
-  margin: 5px 20px 5px 3px;
-}
-
-.questions__link:last-child {
-  margin: 5px 3px 5px 20px;
+.questions__link:first-child{
+	padding: 0px 60px 0px 20px;
 }
 
 
 
-.questions__link:first-child::before {
+ .questions__link:first-child::before {
   content: "";
   display: inline-block;
   width: 20px;
   height: 20px;
+  background: url(../img/quessions/phone_1.png) center/20px no-repeat;
+  padding: 0px 10px 5px 0px;
+} 
+@media(max-width:767px){
+	.questions__link:first-child{
+		padding: 3px 50px;
+		margin: 0 auto;
+	}
+	.questions__link:last-child{
+		padding: 3px 50px;
+		margin: 0 auto;
+	}
+	.questions__container::after{
+	display: none;
+	}
+	.questions__container{
+		position: relative;
+		
+		}
+	.questions__content{
+		flex-direction: column;
+		margin: -10px auto 0px;
+		align-items: center;
+		justify-content: center;
+	}
+	.questions__container::before{
+		position: absolute;
+		top: -50px;
+		left: 44%;
+		transform: scale(0.7);
+		
+	}
 }
-
+@media(max-width:550px){
+	
+	.questions__container::before{
+		
+		top: -50px;
+		left: 42%;
+		
+		
+	}
+}
+@media(max-width:400px){
+	
+	.questions__container::before{
+		
+		top: -50px;
+		left: 40%;
+		
+		
+	}
+}
 .rentalcar__wraper {
   background: #fff;
 }
@@ -592,11 +710,7 @@ form > .btn__link {
   border-radius: 0px;
 }
 
-/*  @media (max-width: 1170px) {
-	.card-block__item:last-child {
-	  margin: 10px 45px 0px 0px;
-	}
- } */
+
 
 @media (max-width: 1300px) {
   .title__header {
@@ -695,16 +809,10 @@ form > .btn__link {
     font-size: calc(20px + 10 * (100vw - 320px) / 880);
   }
 
-  .questions__content {
-    padding: 35 calc(3px + 22 * (100vw - 320px) / 880);
-  }
+  
 }
 
-@media (max-width: 900px) {
-  .questions__content::before {
-    left: 43%;
-  }
-}
+
 
 @media (max-width: 776px) {
   form {
@@ -853,9 +961,7 @@ form > .btn__link {
 }
 
 @media (max-width: 500px) {
-  .questions__content {
-    max-width: 95%;
-  }
+  
 
   .questions__link {
     font-size: calc(12px + 16 * (100vw - 320px) / 880);
@@ -873,8 +979,6 @@ form > .btn__link {
     flex-direction: column;
   }
 
-  .questions__content::before {
-    left: 39%;
-  }
+ 
 }
 
