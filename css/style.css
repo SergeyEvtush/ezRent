@@ -3,6 +3,7 @@
 /*https://demoultron.ru/templates/autorent/*/
 
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,regular,500,700,);
 
 *,
 *::before,
@@ -553,16 +554,29 @@ form > .btn__link {
 		 text-align: center;
 	 }
 }
+.questions__wraper{
+	background: rgb(231, 229, 229);
+}
 .questions__container{
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: -2% 10px 0px 10px;
+	margin: 0px auto 0px auto; 
 	max-width: 100%;
+	
 }
 
+	.questions__container::after{
+		content: "";
+		display: inline-block;
+		width: 1px;
+		height: 20px;
+		background: rgba(90, 90, 90, 0.288);
+		margin: -20px auto; 
+		z-index: 30;
 		
+	}
 	.questions__content {
 		/* max-width: 70%; */
 		align-items: center;
@@ -570,7 +584,7 @@ form > .btn__link {
 		display: flex;
 		margin: -60px auto 0px;
 		text-align: center;
-		padding: 20px 25px;
+		padding: 15px 25px 15px 25px;
 		background: #fff;
 		box-shadow: 0 3px 5px rgba(1, 16, 25, 0.1);
 		border-radius: 5px;
@@ -578,28 +592,8 @@ form > .btn__link {
 		flex: 1 1 100%;
 		flex-wrap: wrap;
 	 }
-	 .questions__container::before{
-		content: "";
-		display: inline-block;
-		width: 80px;
-		height: 80px;
-			border-radius: 50%;
-			background: #fff url(../img/quessions/rescServ.png) center/70px no-repeat; 
-	      z-index: 20;
-	      margin: 0px auto; 
-		   align-self: flex-start;
-		    border-radius: 50%;
-		}
-		.questions__container::after{
-			content: "";
-			display: inline-block;
-			width: 1px;
-			height: 20px;
-			background: rgba(90, 90, 90, 0.288);
-			margin: -20px auto; 
-			z-index: 30;
-		   
-		}
+	
+	
 
 .questions__link {
   display: inline-block;
@@ -626,6 +620,17 @@ form > .btn__link {
   background: url(../img/quessions/phone_1.png) center/20px no-repeat;
   padding: 0px 10px 5px 0px;
 } 
+.questions-container__image {
+position: absolute;
+max-width: 100px;
+top: -100px;
+background: #fff;
+border-radius: 50%;
+}
+.questions-container__image img{
+	
+	width: 100px;
+	}
 @media(max-width:767px){
 	.questions__link:first-child{
 		padding: 3px 50px;
@@ -638,33 +643,24 @@ form > .btn__link {
 	.questions__container::after{
 	display: none;
 	}
-	.questions__container{
-		position: relative;
+	
 		
-		}
 	.questions__content{
 		flex-direction: column;
 		margin: -10px auto 0px;
 		align-items: center;
 		justify-content: center;
 	}
-	.questions__container::before{
-		position: absolute;
-		top: -50px;
-		left: 44%;
-		transform: scale(0.7);
-		
-	}
+	.questions-container__image {
+	
+		top: -60px;
+		transform: scale(0.5);
+		}
+	
 }
 @media(max-width:550px){
 	
-	.questions__container::before{
-		
-		top: -50px;
-		left: 42%;
-		
-		
-	}
+	
 }
 @media(max-width:400px){
 	
@@ -676,39 +672,7 @@ form > .btn__link {
 		
 	}
 }
-.rentalcar__wraper {
-  background: #fff;
-}
 
-.rentalcar__title {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.image__container {
-  display: flex;
-}
-
-.image__block-carrental {
-  max-width: 33.3333%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.image__item {
-  overflow: hidden;
-  width: 100%;
-}
-
-.image__item img {
-  height: 100wh;
-  max-width: 100%;
-}
-
-.rental__btn .btn__link {
-  border-radius: 0px;
-}
 
 
 
@@ -978,7 +942,75 @@ form > .btn__link {
   form {
     flex-direction: column;
   }
-
- 
 }
 
+/*стили  rental car*/
+
+.rentalcar__container {
+	padding:90px 5px 0px 5px;
+}
+.__container {
+}
+.rentalcar__title {
+	margin: 0px auto 45px;
+	text-align: center;
+}
+.rentalcar__title h2{
+	font-family: "Ubuntu";
+font-size: 20px;
+line-height: 1.7;
+font-weight: 700;
+text-transform: uppercase;
+color: #222222;
+
+}
+.rentalcar__wraper {
+	background: rgb(231, 229, 229);
+ }
+ 
+ 
+ 
+ .image__container {
+	display: flex;
+ }
+ 
+ .image__block-carrental {
+	max-width: 33.3333%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+ }
+ 
+ .image__item {
+	overflow: hidden;
+	width: 100%;
+	flex: 1 1 50%;
+ }
+
+.description__block {
+	
+	flex: 1 1 50%;
+}
+ .image__item img {
+	height: 100wh;
+	max-width: 100%;
+ }
+ 
+ .rental__btn .btn__link {
+	border-radius: 0px;
+ }
+.images__container {
+}
+.image__block-carrental {
+}
+
+.description__title {
+}
+.description__car {
+}
+.car__list-description {
+}
+.rental__btn {
+}
+.btn__link {
+}
