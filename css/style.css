@@ -975,42 +975,103 @@ color: #222222;
  }
  
  .image__block-carrental {
-	max-width: 33.3333%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	flex: 1 1 33.333%;
  }
- 
- .image__item {
-	overflow: hidden;
+ .image__item{
+	 width: 100%;
+ }
+ .image__item img{
 	width: 100%;
-	flex: 1 1 50%;
- }
+}
 
 .description__block {
-	
-	flex: 1 1 50%;
-}
- .image__item img {
-	height: 100wh;
-	max-width: 100%;
- }
- 
- .rental__btn .btn__link {
-	border-radius: 0px;
- }
-.images__container {
-}
-.image__block-carrental {
+	background: #fff;
+	width: 100%;
+
 }
 
-.description__title {
+ 
+ .rental__btn .btn__link {
+	margin: 0px 10px 15px 15px;
+	border-radius: 0px;
+	background: #fff;
+	border: 2px solid #61a946;
+	color: #61a946;
+	padding: 7px 30px;
+	font-size: 14px;
+	line-height: 1.2;
+ }
+ .rental__btn .btn__link:hover {
+	background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
+	color: #fff;
+ }
+.images__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.image__block-carrental {
+	flex: 1 1 33.333%;
+	padding: 10px;
+}
+
+.description__title h2{
+	font-size: 15px;
+	text-align: left;
+	line-height: 1.2;
+	text-transform: uppercase;
+color: #222222;
+border-bottom: 1px solid #2222;
+margin: 15px;
+font-weight: 700;
+padding:0px 0px 15px 0px;
 }
 .description__car {
+	width: 100%;
 }
 .car__list-description {
+	max-width: 300px;
+	display: flex;
+	margin: 15px;
+	flex-wrap: wrap;
 }
-.rental__btn {
+
+.car__list-description li{
+	display: inline-block;
+	padding:0px 5px 0px 5px;
+	margin:5px 0px 0px 0px;
+
 }
-.btn__link {
+.car__list-description li:not(:first-child){
+	
+border-left: 1px solid #222;
+
+	
+}
+@media(max-width:767px){
+	.image__block-carrental {
+		margin: 10px;
+		flex: 100%;
+	}
+	.images__container {
+		justify-content: center;
+	}
+	.car__list-description {
+	
+		margin: 25px;
+	
+	}
+	.rental__btn .btn__link {
+		margin: 0px 10px 25px 25px;
+	
+	 }
+	 .description__title h2{
+		
+	margin: 15px 25px;
+	
+	}
 }
