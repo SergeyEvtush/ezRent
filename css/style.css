@@ -674,10 +674,6 @@ border-radius: 50%;
 		
 	}
 }
-
-
-
-
 @media (max-width: 1300px) {
   .title__header {
     padding: 10px 0px 10px 0px;
@@ -937,6 +933,9 @@ border-radius: 50%;
 @media (max-width: 430px) {
   .image__block {
     padding: 0px 0px 150% 0px;
+  }
+  .item__image{
+	  object-position:40% 50% ;
   }
 }
 
