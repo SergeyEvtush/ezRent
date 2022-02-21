@@ -508,7 +508,7 @@ form > .btn__link {
 	font-size: 50px;
 	color: #fff;
 }
-.image__title span{
+ .green__span{
 	color: #61a946;
 }
 .image__paragraph{
@@ -555,7 +555,9 @@ form > .btn__link {
 	 }
 }
 .questions__wraper{
+	position: relative;
 	background: rgb(231, 229, 229);
+	z-index: 20;
 }
 .questions__container{
 	position: relative;
@@ -947,7 +949,7 @@ border-radius: 50%;
 /*стили  rental car*/
 
 .rentalcar__container {
-	padding:90px 5px 0px 5px;
+	padding:90px 5px 180px 5px;
 }
 .__container {
 }
@@ -966,6 +968,7 @@ color: #222222;
 }
 .rentalcar__wraper {
 	background: rgb(231, 229, 229);
+	position: relative;
  }
  
  
@@ -1074,4 +1077,88 @@ border-left: 1px solid #222;
 	margin: 15px 25px;
 	
 	}
+}
+.special-approach{
+	margin-top: -140px;
+	background: #fff;
+}
+.special-approach__container{
+	padding:0px 15px 0px 15px;
+}
+
+.container__content {
+position: relative;
+	padding: 56px 60px 90px 60px;
+	text-align: center;
+	background: linear-gradient(45deg, #141313 25%, transparent 25%, transparent 75%, #111111 75%), linear-gradient(45deg, #1a1919 25%, transparent 25%, transparent 75%, #111111 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #5f5f49, #0e0d0d);
+	background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
+	font-size: 16px;
+	line-height: 23px;
+}
+.special-approach__title {
+	font-size: 28px;
+	line-height: 1.2;
+	margin:20px 15px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.special-approach__parargraph {
+	text-align: center;
+	font-size: 15px;
+	text-align: left;
+	line-height: 1.2;
+	color: #8c8c8c;
+}
+@media(max-width:767px){
+	.special-approach__container{
+		padding:0px 25px 0px 25px;
+	}
+	.container__content {
+		
+		padding: 30px 60px 40px 60px;
+		
+	}
+}
+.additional-equipment {
+}
+.additional-equipment__wraper {
+	text-align: center;
+padding: 70px 0 65px;
+font-size: 18px;
+line-height: 26px;
+color: #646464;
+	max-width: 100%;
+	background: url(../img/equipment/premium-bg.png) center/50% no-repeat;
+	background-size: cover;
+}
+.equipment__container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.equipment__icon {
+	width: 50px;
+}
+.icon {
+	width: 100%;
+}
+.equipment__title {
+	max-width: 400px;
+	color: #222222;
+	letter-spacing: 1px;
+	font-family: 'Ubuntu';
+font-size: 20px;
+line-height: 24px;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+margin: 20px 20px 100px 20px;
+
+}
+.equipment-slider {
+	position: relative;
+	z-index: 20;
+	height: 630px;
+	
 }
