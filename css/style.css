@@ -1129,6 +1129,7 @@ color: #646464;
 	max-width: 100%;
 	background: url(../img/equipment/premium-bg.png) center/50% no-repeat;
 	background-size: cover;
+	min-width:0;
 }
 .equipment__container {
 display: flex;
@@ -1155,9 +1156,100 @@ text-align: center;
 margin: 20px 20px 100px 20px;
 
 }
+/*классы слайдера*/
+/* Слайдер */
 .equipment-slider {
-	position: relative;
-	z-index: 20;
-	height: 630px;
+	position: relative;	
+}
+.slick-slider{
+	min-width: 0;
+}
+.slick-list {
+	overflow: hidden;
+}
+.slick-track{display: flex;}
+.equipment-slider .slick-arrow{
+position: absolute;
+bottom: 0%;
+z-index: 10;
+font-size: 0;
+}
+.equipment-slider .slick-arrow::before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 50%;
+	left: 50%;
+	border-left: 2px solid #141414;
+border-bottom: 2px solid #141414;
+}
+.equipment-slider .slick-arrow.slick-prev::before{
+margin-top: -8px;
+margin-left: -9px;
+}
+.equipment-slider .slick-arrow.slick-next::before{
+margin-top: -8px;
+margin-left: -5px;
+}
+.equipment-slider .slick-arrow.slick-prev::before{
+	transform: rotate(225deg);
+}
+.equipment-slider .slick-arrow.slick-next::before{
+	transform: rotate(45deg);
+}
+.equipment-slider .slick-arrow.slick-prev{
+	bottom: 0%;
+ right: 16%;
+}
+
+.equipment-slider .slick-arrow.slick-next{
+	bottom: 0%;
+	left: 16%; 
+}
+.slick-prev:active, .slick-next:active, .slick-prev:focus, .slick-next:focus, .slick-prev, .slick-next {
+	outline: none;
+	display: block;
+	border: none;
+	background: rgba(192, 192, 192, 0.3);
+	overflow: hidden;
+	text-indent: -999px;
+	border-radius: 100%;
+	width: 58px;
+	height: 58px;
+	position: absolute;
 	
+	margin-top: -24px;
+	z-index: 10;
+	cursor: pointer;
+ }
+ .equipment-slider .slick-arrow.slick-prev:hover::before,.equipment-slider .slick-arrow.slick-next:hover::before{
+	border-color: #666666;
+ }
+ .equipment-slider__item img
+ {
+ opacity: 0.5;
+max-width: 100%;
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+-webkit-filter: grayscale(100%);
+transition: all 0.3s ease;
+}
+ .slick-center img {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	-webkit-filter: none;
+	-moz-filter: none;
+	-ms-filter: none;
+	
+	-o-filter: none;
+	filter: none;
+	filter: none;
+	opacity: 1;
+	transition: all 0.3s ease;
 }
