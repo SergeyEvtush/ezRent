@@ -454,7 +454,7 @@ form > .btn__link {
 }
 
 .insurance__wraper {
-  padding: 35px 0px 65px 0px;
+  padding: 5px 0px 25px 0px;
   background: linear-gradient(45deg, #141313 25%, transparent 25%, transparent 75%, #111111 75%), linear-gradient(45deg, #1a1919 25%, transparent 25%, transparent 75%, #111111 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #5f5f49, #0e0d0d);
   background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
 }
@@ -462,7 +462,7 @@ form > .btn__link {
 .insurance__container {
   margin: 0 auto;
   text-align: center;
-  padding: 30px 5px 0px 5px;
+  padding: 0px 5px 50px 5px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -485,8 +485,9 @@ form > .btn__link {
 }
 .block__map {
 	max-width: 100%;
-	padding:0px 15px 0px 15px;
+	padding:50px 20px 20px 20px;
 	position: relative;
+
 }
 .block__content-insurance{
 	padding:30px 15px 0px 50px;
@@ -498,12 +499,13 @@ form > .btn__link {
 }
 .map__content {
 	position: absolute;
-	top:35%;
-	left: 30%;
+	top:50%;
+	left: 35%;
 }
 .image__title {
 	font-size: 50px;
 	color: #fff;
+	font-weight: normal;
 }
  .green__span{
 	color: #61a946;
@@ -539,11 +541,30 @@ form > .btn__link {
   margin: 0px 0px 30px 0px;
 }
 @media(max-width:767px){
+	.map__content {
+		position: absolute;
+		top:45%;
+		left: 15%;
+	}
+	.block__map {
+		max-width: 100%;
+		padding:50px 10px 20px 10px;
+		position: relative;
+	
+	}
+	.block__content-insurance{
+		padding:30px 0px 0px 0px;
+	}
+	.map__image {
+		object-position: -30px;
+		padding:0px 0px 0px 0px;
+		
+	}
 	.insurance__container::before{
 		display: none;
 	}
 	.insurance__container {
-		padding-top: 0px;
+		padding: 0px 15px 50px 15px;
 		flex-direction: column;
 		
 	 }
