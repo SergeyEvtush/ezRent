@@ -47,28 +47,23 @@ body {
   color: #666;
   font-weight: 500;
   font-family: "PT Sans";
+  width: 100%;
+  
 }
 
 body._lock {
   overflow: hidden;
 }
 
-@font-face {
-  font-family: BriosoPro Italic;
-  font-display: swap;
-  src: url("../fonts/BriosoPro Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
+.wraper{
+	max-width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	overflow: hidden;
+	position: relative;
 }
-
-@font-face {
-  font-family: teddy;
-  font-display: swap;
-  src: url("../fonts/teddy-bear.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
 .menu__icon {
   display: none;
 }
@@ -87,21 +82,23 @@ body._lock {
 }
 
 .header {
-  position: fixed;
+   position: fixed; 
   z-index: 30;
-  width: 100%;
+ width: 100%;
 }
 
 .header__info {
   background: #222222;
   line-height: 1.3;
   padding: 20px 0px 20px 0px;
+  max-width: 100%;
 }
 
 .info__container {
   margin: 0 auto;
   display: flex;
   padding: 0px 5px 0px 5px;
+  max-width: 100%;
 }
 
 .info__item:not(:last-child) {
@@ -1252,4 +1249,59 @@ transition: all 0.3s ease;
 	filter: none;
 	opacity: 1;
 	transition: all 0.3s ease;
+}
+/*clients*/
+.clients {
+}
+.clients__wraper {
+	background: url(../img/clients/indicators-bg.jpg) center 0 no-repeat;
+  background-size: auto;
+background-size: cover;
+padding: 100px 0 75px;
+color: #FFF;
+text-align: center;
+}
+.clients__container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	
+}
+
+.content__block-clients {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	max-width: 70%;
+}
+.block__item {
+	margin:0px 20px 30px 0px;
+}
+
+.clients__title {
+	font-size: 60px;
+line-height: 63px;
+font-weight: 700;
+margin: 0px 0px 10px 0px;
+}
+.clients__subtitle {
+	position: relative;
+padding: 2px 14px;
+display: inline-block;
+text-transform: uppercase;
+font-weight: 700;
+border-left:solid 4px #60ad45 ;
+border-right:solid 4px #60ad45 ;
+}
+@media(max-width:767px){
+	.clients__container {
+		align-items: center;
+		justify-content: center;
+	}
+	.clients__subtitle {
+
+	padding: 1px 5px;
+	
+	}
 }
