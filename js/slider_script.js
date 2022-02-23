@@ -1,3 +1,7 @@
+
+
+
+
 $(document).ready(function () { 
 	$('.equipment-slider').slick({
 		arrows: true,
@@ -22,5 +26,15 @@ $(document).ready(function () {
 		
 		
 	});
+	$('.slider-block').slick({
+		centerPadding: '0px',
+		slidesToShow: 1,
+		centerMode: true,
+		
+	});
 });
+
+
+
+
 /*https://youtu.be/rXNfDfqtM3M?t=2992 */

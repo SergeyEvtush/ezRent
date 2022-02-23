@@ -28,21 +28,21 @@ BlackBerry:function(){
 		);
 	}
 };
-const screenWidth = window.screen.width
+//const screenWidth = window.screen.width
 /* console.log(screenWidth); */
 
-const imageBlock = document.getElementById("image");
+//const imageBlock = document.getElementById("image");
 /* console.log(imageBlock); */
 
-if (screenWidth >= 1200) {
-	document.getElementById("image").src = `img/SliderMain/Rio_pc.jpg`;
-}
-else if (screenWidth < 1200 && screenWidth > 768) { 
-	document.getElementById("image").src  = `img/SliderMain/Rio800.jpg`;
-}
-else if (screenWidth < 767 ) { 
-	document.getElementById("image").src  = `img/SliderMain/Riomob.jpg`;
-}
+//if (screenWidth >= 1200) {
+//	document.getElementById("image").src = `img/SliderMain/Rio_pc.jpg`;
+//}
+//else if (screenWidth < 1200 && screenWidth > 768) { 
+//	document.getElementById("image").src  = `img/SliderMain/Rio800.jpg`;
+//}
+//else if (screenWidth < 767 ) { 
+//	document.getElementById("image").src  = `img/SliderMain/Riomob.jpg`;
+//}
 //проверка на каком устройстве открыта страница
 if	(isMobile.any())
 {

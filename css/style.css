@@ -79,6 +79,7 @@ body._lock {
 .__container {
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .header {
@@ -179,41 +180,38 @@ body._lock {
   text-transform: uppercase;
 }
 
-.slider__item {
-  position: relative;
+.slick-slider{
+	min-width: 0;
 }
-
-.image__wraper {
-  position: absolute;
+.slick-list {
+	overflow: hidden;
 }
-
-.image__block {
-  position: relative;
-  overflow: hidden;
-  padding: 0px 0px 58% 0px;
-  overflow: hidden;
+.slick-track{display: flex;}
+.slider-block{
+	margin:50px 0px 0px 0px;
+	max-height: 750px;
+	width: 100%;
 }
-
-.item__image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+.slider__br{
+	width: 100%;
+	
 }
-
-.item__content {
-  position: relative;
+.main-slider__item{
+	height: 750px;
+	max-width: 100%;
+	background: url(../img/SliderMain/Rio1300.jpg) 30% 50% no-repeat; 
+	background-size: cover;;
 }
-
-.content__block {
-  position: absolute;
-  margin: 400px 0px 0px 0px;
-  z-index: 10;
+.__second{
+	
+	background: url(../img/SliderMain/main-slider2.jpg);
 }
-
+.__therd{
+	background: url(../img/SliderMain/Solaris2019S.jpg) 0 60% no-repeat; 
+}
+.__four{
+	background: url(../img/SliderMain/main-slider1.jpg) 0 60% no-repeat; 
+}
 .content__title {
   font-size: 20px;
   font-weight: 700;
@@ -247,8 +245,11 @@ body._lock {
   display: inline-block;
   background: #000;
 }
-
+.content__block{
+	max-width: 54%;
+}
 .btn__link {
+	
   display: inline-block;
   background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
   border-radius: 20px;
@@ -416,13 +417,13 @@ form > .btn__link {
   background: url(../img/advantages/icon-securety.png) center 15px/45px no-repeat; }
 
  .card-block__item:nth-child(3) .card-block__image{
-  background: url(../img/advantages/lightning1.png) center 12px/50px no-repeat; }
+  background: url(../img/advantages/lightning1.png) center 10px/50px no-repeat; }
 
 .card-block__item:first-child .card-block__image{
   background: url(../img/advantages/dollar1.png) center 18px/35px no-repeat; }
 
  .card-block__item:nth-child(2) .card-block__image{
-  background: url(../img/advantages/icon-car.png) 10px 25px/50px no-repeat; }
+  background: url(../img/advantages/icon-car.png) 15px 25px/45px no-repeat; }
 
 .card-block__image {
   max-width: 125px;
