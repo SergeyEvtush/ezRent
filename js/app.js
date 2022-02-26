@@ -41,7 +41,7 @@ if (screenWidth >= 1200) {
 	document.getElementById("image").src  = `img/SliderMain/Rio800.jpg`;
 } */
 else if (screenWidth < 430 ) { 
-	document.getElementById("image").src  = `img/SliderMain/Riomob.jpg`;
+	document.getElementById("image").src  = `img/SliderMain/Riomob.jpg`;/*  */
 }
 //проверка на каком устройстве открыта страница
 if	(isMobile.any())

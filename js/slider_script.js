@@ -8,6 +8,7 @@ $(document).ready(function () {
 		easing: 'cubic-bezier(0.75,-1,0.21,-1)',
 		autoplay: true,
 		autoplaySpeed: 1000,
+		initialSlide:1,
 		pauseOnHover: false,
 		touchThreshold: 7,
 		responsive: [
