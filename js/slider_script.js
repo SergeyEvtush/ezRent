@@ -24,6 +24,7 @@ $(document).ready(function () {
 		
 	});
 	$('.reviews__slider').slick({
+		dots: true,
 		arrows: false,
 		slidesToShow: 1,
 		speed: 1000,

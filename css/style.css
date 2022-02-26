@@ -1221,6 +1221,7 @@ margin: 20px 20px 100px 20px;
 .equipment-slider {
 	position: relative;	
 	max-height: 400px;
+	min-width: 0;
 	
 }
 .slick-slider{
@@ -1560,6 +1561,7 @@ position: absolute;
 	background: url(../img/reviews/Solaris_front.png) right 0 no-repeat;
 	background-size: 30%;
 overflow: hidden;
+object-fit: cover;
 }
 @media(max-width:768px){
 	.reviews__wraper {
@@ -1569,16 +1571,50 @@ overflow: hidden;
 	}
 }
 .reviews__slider {
+	margin:0px 200px 0px 0px;
+	min-width: 0;
 }
 .item__reviews-slider {
+	min-width: 0;
 	
 }
+.reviews__slider .slick-dots{
+display: flex;
+align-items: center;
+justify-content: flex-start;
+margin:40px 0px 0px 120px;
+}
+@media(max-width:768px){
+	.reviews__slider .slick-dots{
+		
+		justify-content: center;
+		margin:40px 0px 0px 0px;
+		}
+}
+.reviews__slider .slick-dots li{
+list-style: none;
+margin: 0px 5px;
+}
+.reviews__slider .slick-dots button{
+font-size: 0;
+width: 13px;
+height: 13px;
+background: #000;
+border-radius: 50%;
+}
+.reviews__slider .slick-dots li.slick-active button{
+	background:  #60ad45;
+}
+
 .item__container {
 	display: flex;
 	max-width:850px ;
 	padding:0px 100px 0px 0px;
 }
 @media(max-width:768px){
+	.reviews__slider {
+		margin:0 auto;
+	}
 	.item__container {
 		flex-direction: column;
 		align-items: center;
@@ -1593,7 +1629,7 @@ overflow: hidden;
 	height: 120px;
 	width: 120px;
 	border-radius: 50%;
-	overflow: hidden;
+	object-fit: cover;
 }
 .description__review {
 	position: relative;
