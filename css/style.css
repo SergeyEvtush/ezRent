@@ -1561,6 +1561,13 @@ position: absolute;
 	background-size: 30%;
 overflow: hidden;
 }
+@media(max-width:768px){
+	.reviews__wraper {
+		
+		background: #fff;
+	
+	}
+}
 .reviews__slider {
 }
 .item__reviews-slider {
@@ -1571,6 +1578,17 @@ overflow: hidden;
 	max-width:850px ;
 	padding:0px 100px 0px 0px;
 }
+@media(max-width:768px){
+	.item__container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding:0px 20px 0px 20px;
+		text-align: center;
+	}
+	
+	
+}
 .image__review img{
 	height: 120px;
 	width: 120px;
@@ -1579,23 +1597,40 @@ overflow: hidden;
 }
 .description__review {
 	position: relative;
-	
-	padding:0px 130px 0px 0px;
+	padding:0px 130px 0px 10px;
 }
+
 .description__review::after{
 	content: '“' ;
 	position: absolute;
 right: 0;
 top: 0;
 line-height: 300px;
-color: #00d607;
+color:  #60ad45;
 font-size: 300px;
 font-family: 'PT Sans', sans-serif;
+}
+@media(max-width:768px){
+	.description__review {
+		margin: 0 auto;
+		padding:0px 0px 0px 10px;
+	}
+	.description__review::after{
+		content: '' ;
+	font-size: 0px;
+	
+	}
 }
 .title__description {
 	display: flex;
 	align-items: flex-end;
 	margin:0px 0px 25px 0px;
+}
+@media(max-width:768px){
+	.title__description {
+
+		flex-direction: column;
+		align-items: center;}
 }
 .title__description h4{
 	font-size: 15px;
@@ -1610,9 +1645,12 @@ font-family: 'PT Sans', sans-serif;
 color: rgba(59, 59, 59, 0.404);
 }
 .text__description {
+	font-family: "Ubuntu";
 	font-size: 12px;
-	line-height: 1;
+	line-height: 1.6;
 	letter-spacing: 0.7px;
+	color: rgba(61, 60, 60, 0.5);
+	
 }
 .reviws__title {
 	margin: 0px auto 45px;
