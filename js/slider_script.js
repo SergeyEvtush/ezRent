@@ -23,5 +23,14 @@ $(document).ready(function () {
 		
 		
 	});
+	$('.reviews__slider').slick({
+		arrows: false,
+		slidesToShow: 1,
+		speed: 1000,
+		easing: 'cubic-bezier(0.75,-1,0.21,-1)',
+		autoplay: true,
+		autoplaySpeed: 1000,
+		touchThreshold: 7,
+	});
 });
 /*https://youtu.be/rXNfDfqtM3M?t=2992 */

@@ -1552,3 +1552,76 @@ left: 0;
 background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
 position: absolute;
  } 
+ /*reviews*/
+ .reviews {
+}
+.reviews__wraper {
+	padding: 60px 0 80px;
+	background: url(../img/reviews/Solaris_front.png) right 0 no-repeat;
+	background-size: 30%;
+overflow: hidden;
+}
+.reviews__slider {
+}
+.item__reviews-slider {
+	
+}
+.item__container {
+	display: flex;
+	max-width:850px ;
+	padding:0px 100px 0px 0px;
+}
+.image__review img{
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.description__review {
+	position: relative;
+	
+	padding:0px 130px 0px 0px;
+}
+.description__review::after{
+	content: '“' ;
+	position: absolute;
+right: 0;
+top: 0;
+line-height: 300px;
+color: #00d607;
+font-size: 300px;
+font-family: 'PT Sans', sans-serif;
+}
+.title__description {
+	display: flex;
+	align-items: flex-end;
+	margin:0px 0px 25px 0px;
+}
+.title__description h4{
+	font-size: 15px;
+	line-height: 1.2;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #000;
+	margin:0px 5px 0px 0px;
+}
+.title__description span{
+color: rgba(59, 59, 59, 0.404);
+}
+.text__description {
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0.7px;
+}
+.reviws__title {
+	margin: 0px auto 45px;
+	text-align: center;
+}
+.reviws__title h2{
+	font-family: "Ubuntu";
+font-size: 20px;
+line-height: 1.7;
+font-weight: 700;
+text-transform: uppercase;
+color: #222222;
