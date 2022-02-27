@@ -1698,4 +1698,114 @@ font-size: 20px;
 line-height: 1.7;
 font-weight: 700;
 text-transform: uppercase;
-color: #222222;
+color: #222222;}
+
+/*footer*/
+.footer__container {
+	padding:0px 5px 0px 5px;
+}
+.__container {
+}
+@media(max-width:1200px){
+	.footer__container {
+		
+	}
+}
+
+.wraper__footer-container {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(45deg, #141313 25%, transparent 25%, transparent 75%, #111111 75%), linear-gradient(45deg, #1a1919 25%, transparent 25%, transparent 75%, #111111 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #22221e, #0e0d0d);
+	background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
+}
+.item__footer-container {
+	padding:70px 60px 70px 60px;
+	display: flex;
+	justify-content: center;
+align-items: center;
+margin: 0 auto;
+flex: 0 1 33.333%;
+}
+@media(max-width:1200px){
+	.item__footer-container {
+		padding:40px 20px 10px 20px;
+		flex: 1 1 33.333%;
+		margin:0px 0px 0px 0px;
+		max-width: 250px;
+	}
+	.wraper__footer-container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+		
+	}
+}
+.item__footer-container:nth-child(2){
+	border-right: 1px solid rgba(70, 70, 70, 0.493);
+	border-left: 1px solid rgba(70, 70, 70, 0.493);
+}
+@media(max-width:768px){
+	.item__footer-container:nth-child(2) {
+		border-right:none;
+		border-left:none;
+	}
+}
+.icon-row__contacts {
+	width: 50px;
+	height: 50px;
+}
+.icon-row__contacts {
+	width: 50px;
+	height: 50px;
+	margin:0px 20px 0px 0px;
+	
+}
+
+.link__icon {
+	display: inline-block;
+}
+
+.row__contacts {
+	margin:0px 0px 10px 0px;
+	display: flex;
+	flex-direction: column;
+	max-width: 200px;
+}
+.link__contacts {
+	color: #fff;
+	font-family: 'PT Sans', Tahoma, sans-serif;
+	font-size: 17px;
+}
+.contacts_link {
+	text-transform: uppercase;
+	font-weight: 700;
+	margin:0px 0px 3px 0px;
+}
+.post_link {
+	font-size: 16px;
+}
+.__address {
+
+}
+.address__link {
+	line-height: 1.2;
+}
+.row__contacts p{
+color: #fff;
+font-size: 17px;
+line-height: 1.2;
+}
+.map{
+	margin:-140px 0px 0px 0px;
+	
+}
+@media(max-width:768px){
+	.map{
+		margin:0px 0px 0px 0px;
+		padding:0px 5px ;
+		
+	}
+}
