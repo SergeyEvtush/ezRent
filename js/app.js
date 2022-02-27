@@ -120,23 +120,15 @@ e.preventDefault();//отключаем работу ссылки
 const acc = document.getElementsByClassName("accordion");
 acc[1].classList.add("active");
 var i;
-var pane = document.getElementsByClassName("panel");
+const pane = document.getElementsByClassName("panel");
 pane[1].classList.add("active");
 pane[1].style.maxHeight = pane[1].scrollHeight + "px"
+
 for (i = 0; i < acc.length; i++) {
-	
 	acc[i].addEventListener("click", function () {
-		var array = document.getElementsByClassName("accordion");
-		var pane1 = document.getElementsByClassName("panel");
-		console.log(array);
-		for (let i = 0; i < array.length; i++) { 
-			array[i].classList.remove("active");
-			pane1[i].classList.remove("active");
-			pane1[i].style.maxHeight = null;
-		}
+		closeTab(acc,pane);
 	  this.classList.toggle("active");
 		var panel = this.nextElementSibling;
-		
 	  panel.classList.toggle("active");
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
@@ -149,7 +141,14 @@ for (i = 0; i < acc.length; i++) {
 		
   });
 }
-
+function closeTab(tabsArray, contentTabsArray) {
+	for (let i = 0; i < tabsArray.length; i++) { 
+		tabsArray[i].classList.remove("active");
+		contentTabsArray[i].classList.remove("active");
+		contentTabsArray[i].style.maxHeight = null;
+	}
+ }
+/*-------------------------------------- */
 //!popup form 
 const headerBlock = document.querySelector('header');
 const popupLinks = document.querySelectorAll('.popup-link');
