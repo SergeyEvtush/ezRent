@@ -118,12 +118,18 @@ e.preventDefault();//отключаем работу ссылки
 }
 /*аккордеон */
 var acc = document.getElementsByClassName("accordion");
+acc[1].classList.add("active");
 var i;
-
+var pane = document.getElementsByClassName("panel");
+pane[1].classList.add("active");
+pane[1].style.maxHeight = pane[1].scrollHeight + "px"
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
+	
+	acc[i].addEventListener("click", function () {
+	  
+	  this.classList.toggle("active");
+	  var panel = this.nextElementSibling;
+	  panel.classList.toggle("active");
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
     } else {
@@ -131,3 +137,117 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+
+//!popup form 
+const headerBlock = document.querySelector('header');
+const popupLinks = document.querySelectorAll('.popup-link');
+const body = document.querySelector('body');
+const lockPadding = document.querySelectorAll(".lock-padding");
+let unlock = true;
+const timeout = 800;
+if(popupLinks.length>0)
+{
+	
+for(let index=0;index<popupLinks.length;index++)
+{
+	const popupLink=popupLinks[index];
+	popupLink.addEventListener("click",function(e){
+	const popupName = popupLink.getAttribute('href').replace('#','');//здесь мы берем ссылку на которую кликаем и из атрибута href  убирае решетку и заменяем на имя по id
+		const curentPopup = document.getElementById(popupName);
+		popupOpen(curentPopup);
+		
+	e.preventDefault();//с пом этой функции запрещаем перезагружать страницу
+}
+	);}
+}
+//метод для объектов закрывающих попап
+const popupCloseIcon = document.querySelectorAll('.close-popup');
+if(popupCloseIcon.length>0)
+{
+	for(let index=0;index<popupCloseIcon.length;index++)
+	{
+const el=popupCloseIcon[index];
+el.addEventListener(
+	'click',function(e){
+		popupClose(el.closest('.popup'));
+		
+		e.preventDefault();
+
+	}
+);}
+}
+function popupOpen(curentPopup){
+if(curentPopup && unlock)
+{
+const popupActive=document.querySelector('.popup.open');
+if(popupActive){
+popupClose(popupActive,false);
+
+}
+else{
+bodyLock();
+
+}
+curentPopup.classList.add('open');
+curentPopup.addEventListener("click",function(e){
+if(!e.target.closest('.popup__content')){
+	popupClose(e.target.closest('.popup'));
+			}
+		});
+	}
+}
+function popupClose(popupActive,doUnlock = true){
+if(unlock){
+	popupActive.classList.remove('open');
+	
+	headerBlock.classList.remove('no-visible');
+if(doUnlock){
+bodyUnLock();
+}
+}
+}
+
+function bodyLock(){
+const lockPaddingValue=window.innerWidth-document.querySelector('.wraper').offsetWidth+'px';
+if(lockPadding.length>0){
+	for(let index=0;index<lockPadding.length;index++){
+		const el=lockPadding[index];
+		el.style.paddingRight=lockPaddingValue;
+		}
+}
+
+body.style.paddingRight=lockPaddingValue;
+body.classList.add('lock');
+unlock=false;
+setTimeout(function(){
+unlock=true;
+
+},timeout);
+}
+function bodyUnLock(){
+setTimeout(function(){
+	if(lockPadding.length>0){
+		for(let index=0;index<lockPadding.length;index++){
+			const el = lockPadding[index];
+			el.style.paddingRight = '0px';
+			}
+	}
+
+body.style.paddingRight='0px';
+body.classList.remove('lock');
+},timeout);
+unlock=false;
+setTimeout(function(){
+	unlock=true;
+},timeout);
+}
+document.addEventListener('keydown',function(e){
+if(e.which===27){
+const popupActive=document.querySelector('.popup.open');
+popupClose(popupActive);
+}
+
+
+})
+
+
