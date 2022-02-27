@@ -224,16 +224,26 @@ position: relative;
 @media(max-width:768px){
 	
 	.item__content {
-		margin-top: 30px;
+		margin-top: 60px;
 	position: relative;
 	
 	}
 	
 }
+
 .content__block {
 	padding:50px 500px 0px 10px;
 	position: absolute;
 	z-index: 20;
+}
+@media(max-width:768px){
+	
+	.content__block {
+		padding:50px 200px 0px 10px;
+		position: absolute;
+		z-index: 20;
+	}
+	
 }
 @media(max-width:690px){
 	.content__block {
