@@ -117,7 +117,7 @@ e.preventDefault();//отключаем работу ссылки
 		}
 }
 /*аккордеон */
-var acc = document.getElementsByClassName("accordion");
+const acc = document.getElementsByClassName("accordion");
 acc[1].classList.add("active");
 var i;
 var pane = document.getElementsByClassName("panel");
@@ -126,15 +126,27 @@ pane[1].style.maxHeight = pane[1].scrollHeight + "px"
 for (i = 0; i < acc.length; i++) {
 	
 	acc[i].addEventListener("click", function () {
-	  
+		var array = document.getElementsByClassName("accordion");
+		var pane1 = document.getElementsByClassName("panel");
+		console.log(array);
+		for (let i = 0; i < array.length; i++) { 
+			array[i].classList.remove("active");
+			pane1[i].classList.remove("active");
+			pane1[i].style.maxHeight = null;
+		}
 	  this.classList.toggle("active");
-	  var panel = this.nextElementSibling;
+		var panel = this.nextElementSibling;
+		
 	  panel.classList.toggle("active");
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
+	 }
+		
+	 else {
+		 panel.style.maxHeight = panel.scrollHeight + "px";
+		} 
+		
+		
   });
 }
 
