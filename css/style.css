@@ -1584,9 +1584,9 @@ margin: 0 auto;
 .panel {
 	padding: 0 18px;
   	color: #2121219b;
- 	width: 80%;
+ 	width: 100%;
 	max-height: 0;
-	padding:0px 50px 0px 0px;
+	padding:0px 10px 0px 0px;
 	overflow: auto;
 	transition: max-height 0.3s ease-out;
 
@@ -1613,8 +1613,8 @@ margin: 0px auto 0px auto;
 	background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
 }
 .panel p{
-	text-align: center;
-	padding:20px 10px 20px 70px;
+	text-align: left;
+	padding:20px 10px 20px 60px;
 	line-height: 1.5;
 }
 
@@ -1650,6 +1650,17 @@ margin: 0px auto 0px auto;
   margin:0px  0px 0px 0px;  
   padding-left: 0px;
 padding-right: 0px;
+}
+.panel {
+	padding: 0 5px 0 0px;
+	width: 100%;
+
+}
+.panel p{
+	text-align: center;
+	padding:20px 0px 20px 70px;
+	line-height: 1.5;
+	width: 100%;
 }
 }
 
