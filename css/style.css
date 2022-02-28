@@ -1586,7 +1586,7 @@ margin: 0 auto;
   	color: #2121219b;
  	width: 100%;
 	max-height: 0;
-	padding:0px 10px 0px 0px;
+	padding:0px 0px 0px 0px;
 	overflow: auto;
 	transition: max-height 0.3s ease-out;
 
@@ -1616,6 +1616,7 @@ margin: 0px auto 0px auto;
 	text-align: left;
 	padding:20px 10px 20px 60px;
 	line-height: 1.5;
+	background: #fff;
 }
 
 @media(max-width:768px){
