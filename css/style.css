@@ -1653,13 +1653,13 @@ margin: 0px auto 0px auto;
 padding-right: 0px;
 }
 .panel {
-	padding: 0 5px 0 0px;
+	padding: 0 0px 0 0px;
 	width: 100%;
-
+	
 }
 .panel p{
-	text-align: center;
-	padding:20px 0px 20px 70px;
+	text-align: left;
+	padding:20px 5px 20px 60px;
 	line-height: 1.5;
 	width: 100%;
 }
