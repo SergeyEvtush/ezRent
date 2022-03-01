@@ -257,8 +257,100 @@ if(e.which===27){
 const popupActive=document.querySelector('.popup.open');
 popupClose(popupActive);
 }
-
-
 })
+//клонирование элементов аренды
+var CloningCard = document.getElementById("clone");
+CloningCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car0.jpg" alt="car">`;
+CloningCard.querySelector('.title__car-text').innerHTML = "Wolkswagen Polo";
 
+function SetCardsTitle(clone,carsArray,data) {
+	for (let i = 0; i <carsArray.length; i++) { 
+		var CloneCard = clone.cloneNode(true);
+		CloneCard.querySelector('.title__car-text').innerHTML = carsArray[i];
+		CloneCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car${i + 1}.jpg" alt="car">`;
+		/* CloneCard.querySelector('.car__list-description').innerHTML = setLisiInfo(data, carsArray[i]); */
+		clone.after(CloneCard);
+	}
+ }
+/*--------------------------------------------------------- */
+var valueOfCar = document.getElementsByClassName('title__car-text');
+var listOfDescription = document.getElementById('list');//получаем в переменную список 
+var request = new XMLHttpRequest();//создаем объект запроса
+var requestURL = 'files/jsonFiles/descriptionCar.json';//получаем адрес json файла
+request.open('GET',requestURL);
+//создаем объект запроса
 
+request.onload=function(e){
+	if(request.readyState===4){
+		if(request.status===200){
+			
+			var dataList=JSON.parse(request.responseText);//получаем текстовые данные которые записываем в переменную dataTable
+			/* setLisiInfo(dataList, valueOfCar); */
+			SetCardsTitle(CloningCard, setNamesOfCars(dataList));
+			
+			
+	
+		}
+		else{
+			console.error(request.statusText);//иначе выводим сообщение об ошибке
+		}
+	}
+	};
+	request.onerror=function(e){//метод вывода сообщений об ошибке
+		console.error(request.statusText);
+	};
+request.send(null);
+let carsArray;
+/*метод получения массива автомобилей */
+function setNamesOfCars(data) {
+	for (let key in data) {
+		if (data.hasOwnProperty(key)) {
+			carsArray = Object.keys(data);
+			/* console.log(carsArray.length); */
+			
+			return carsArray; 
+			}
+		
+		else {
+			console.log('Нет машин');
+			return 0;
+		}
+	}
+}
+function setDescriptionsOfCars(data) {
+	for (let key in data) {
+		if (data.hasOwnProperty(key)) {
+			carsArray = Object.values(data);
+			/* console.log(carsArray.length); */
+			
+			return carsArray; 
+			}
+		
+		else {
+			console.log('Нет машин');
+			return 0;
+		}
+	}
+}
+//TODOдОДУМАТЬ ФУНКЦИЮ ПОЛУЧЕНИЯ СПИСКА ЭЛЕМЕНТОВ
+/* function setLisiInfo(data,valueOfCar)
+{
+	let ChoisedCar = setDescriptionsOfCars(data);//получаем массив автомобиля в переменную
+	
+	
+
+var valueOfCar;
+for(let key in ChoisedCar){
+	let propertyCar = ChoisedCar[key];//получаем свойство в переменную
+	console.log(propertyCar.length);
+	
+  valueOfCar=Object(propertyCar);//получаем значение ключа свойства в переменную
+	 if(valueOfCar==ChoisedCar){//если значение ключа свойства не равно "coast" то вносим это значение в список
+			{	const li=document.createElement('li');
+					li.classList.add('listPropertes');
+						li.innerHTML=`<li>${valueOfCar}</li>`;
+							listOfDescription.appendChild(li); 
+			}																			
+		}  
+	}
+} */
