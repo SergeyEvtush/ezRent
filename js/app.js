@@ -258,16 +258,17 @@ const popupActive=document.querySelector('.popup.open');
 popupClose(popupActive);
 }
 })
-//клонирование элементов аренды
 var CloningCard = document.getElementById("clone");
-CloningCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car0.jpg" alt="car">`;
-CloningCard.querySelector('.title__car-text').innerHTML = "Wolkswagen Polo";
 
-function SetCardsTitle(clone,carsArray,data) {
-	for (let i = 0; i <carsArray.length; i++) { 
+function SetCardsTitle(clone, carsArray, data) {
+	//клонирование элементов аренды
+
+CloningCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car0.jpeg" alt="car">`;
+CloningCard.querySelector('.title__car-text').innerHTML = carsArray[0];
+	for (let i = 1; i <=carsArray.length-1; i++) { 
 		var CloneCard = clone.cloneNode(true);
 		CloneCard.querySelector('.title__car-text').innerHTML = carsArray[i];
-		CloneCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car${i + 1}.jpg" alt="car">`;
+		CloneCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car${i}.jpeg" alt="car">`;
 		/* CloneCard.querySelector('.car__list-description').innerHTML = setLisiInfo(data, carsArray[i]); */
 		clone.after(CloneCard);
 	}
