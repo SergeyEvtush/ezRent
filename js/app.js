@@ -258,23 +258,34 @@ const popupActive=document.querySelector('.popup.open');
 popupClose(popupActive);
 }
 })
+let carsArray;
+let description;
 var CloningCard = document.getElementById("clone");
 
 function SetCardsTitle(clone, carsArray, data) {
 	//клонирование элементов аренды
-
-CloningCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car0.jpeg" alt="car">`;
-CloningCard.querySelector('.title__car-text').innerHTML = carsArray[0];
-	for (let i = 1; i <=carsArray.length-1; i++) { 
-		var CloneCard = clone.cloneNode(true);
-		CloneCard.querySelector('.title__car-text').innerHTML = carsArray[i];
-		CloneCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car${i}.jpeg" alt="car">`;
-		/* CloneCard.querySelector('.car__list-description').innerHTML = setLisiInfo(data, carsArray[i]); */
-		clone.after(CloneCard);
+	clone.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car0.jpeg" alt="car">`;//установка фоток в первую карту
+	clone.querySelector('.title__car-text').innerHTML = carsArray[0];//название в первую карту
+	//создаю клонов кар первой карты
+	for (let i = 1; i <= carsArray.length - 1; i++) {
+		var CloneCard = clone.cloneNode(true);//обозначаю что клонирование глубокое т.е все узлы
+		CloneCard.querySelector('.title__car-text').innerHTML = carsArray[i];//меняю названия ,беру их из массива в json
+		CloneCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car${i}.jpeg" alt="car">`;//меняю путь к фоткам i элемент цифра в фотке в фотке
+		var g = getArrayOfTheCarDescr(getDescriptionOfCars(setNamesOfCars(data), data, carsArray[i]));//метод получения массива описаний машин
+		/* console.log(g); */
+		//бегаю по этому массиву и получаю данные для списка характеристик машин
+		for (let h = 0; h < g.length; h++) {
+			 const li=document.createElement('li');//создаем новый элемент списка
+			 li.innerHTML=g[h]; //заполняем его
+			 CloneCard.querySelector('.item__car-list').replaceWith(li);//берем старый и меняем на новый
+		}
+	//TODO Разобраться с неработающими кнопками
+		clone.after(CloneCard);//добавляю клонированную карту
 	}
- }
+}
+
 /*--------------------------------------------------------- */
-var valueOfCar = document.getElementsByClassName('title__car-text');
+var valueOfCar = document.getElementsByClassName('title__car-text');//переменная для получения названия машин
 var listOfDescription = document.getElementById('list');//получаем в переменную список 
 var request = new XMLHttpRequest();//создаем объект запроса
 var requestURL = 'files/jsonFiles/descriptionCar.json';//получаем адрес json файла
@@ -284,13 +295,8 @@ request.open('GET',requestURL);
 request.onload=function(e){
 	if(request.readyState===4){
 		if(request.status===200){
-			
 			var dataList=JSON.parse(request.responseText);//получаем текстовые данные которые записываем в переменную dataTable
-			/* setLisiInfo(dataList, valueOfCar); */
-			SetCardsTitle(CloningCard, setNamesOfCars(dataList));
-			
-			
-	
+			SetCardsTitle(CloningCard, setNamesOfCars(dataList),dataList);//метод для заполнения карточек 
 		}
 		else{
 			console.error(request.statusText);//иначе выводим сообщение об ошибке
@@ -301,57 +307,55 @@ request.onload=function(e){
 		console.error(request.statusText);
 	};
 request.send(null);
-let carsArray;
+
 /*метод получения массива автомобилей */
 function setNamesOfCars(data) {
 	for (let key in data) {
 		if (data.hasOwnProperty(key)) {
 			carsArray = Object.keys(data);
-			/* console.log(carsArray.length); */
-			
+			 /* console.log(carsArray);  */
 			return carsArray; 
 			}
-		
 		else {
 			console.log('Нет машин');
 			return 0;
 		}
 	}
 }
-function setDescriptionsOfCars(data) {
-	for (let key in data) {
-		if (data.hasOwnProperty(key)) {
-			carsArray = Object.values(data);
-			/* console.log(carsArray.length); */
-			
-			return carsArray; 
+//Метод получения определенного описания всех машин
+//в параметрах должен быть массив объектов машин общие данные и машина 
+function getDescriptionOfCars(arrayCars,data,car) { 
+	var arrayOfCarsObjects = arrayCars;
+	var dataArray = data;
+	console.log(arrayOfCarsObjects);
+			for (const key in dataArray) {//в строчке ниже я сверяю переданную машину с машиной из данных если такая есть то получаю данные
+				if (Object.hasOwnProperty.call(dataArray, key)&&key===car) {
+				console.log(typeof(key));
+				const element = Object.values(dataArray[key]);
+				/* console.log(element); */
+				return element;
+				}
 			}
-		
-		else {
-			console.log('Нет машин');
-			return 0;
+		}
+//Метод получения значений описания 
+function getArrayOfTheCarDescr(arrayDescription) {
+	for (let i = 0; i <arrayDescription.length; i++) {
+		 for (const key in arrayDescription) {
+			if (Object.hasOwnProperty.call(arrayDescription, key)) {
+				const element = Object.values(arrayDescription);
+					return element;
+				}
+			}
 		}
 	}
-}
-//TODOдОДУМАТЬ ФУНКЦИЮ ПОЛУЧЕНИЯ СПИСКА ЭЛЕМЕНТОВ
-/* function setLisiInfo(data,valueOfCar)
-{
-	let ChoisedCar = setDescriptionsOfCars(data);//получаем массив автомобиля в переменную
-	
-	
 
-var valueOfCar;
-for(let key in ChoisedCar){
-	let propertyCar = ChoisedCar[key];//получаем свойство в переменную
-	console.log(propertyCar.length);
-	
-  valueOfCar=Object(propertyCar);//получаем значение ключа свойства в переменную
-	 if(valueOfCar==ChoisedCar){//если значение ключа свойства не равно "coast" то вносим это значение в список
-			{	const li=document.createElement('li');
-					li.classList.add('listPropertes');
-						li.innerHTML=`<li>${valueOfCar}</li>`;
-							listOfDescription.appendChild(li); 
-			}																			
-		}  
-	}
-} */
+
+
+
+
+
+
+ 
+
+																	
+
