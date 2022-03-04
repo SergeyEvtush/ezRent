@@ -151,12 +151,15 @@ function closeTab(tabsArray, contentTabsArray) {
 /*-------------------------------------- */
 //!popup form 
 const headerBlock = document.querySelector('header');
-const popupLinks = document.querySelectorAll('.popup-link');
+/* const popupLinks = document.querySelectorAll('.popup-link'); */
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll(".lock-padding");
 let unlock = true;
 const timeout = 800;
-if(popupLinks.length>0)
+//метод подменяющий # в атрибуте href на пустоту для того чтобы по клику переходить к попапу
+function writeHref() {
+	const popupLinks = document.querySelectorAll('.popup-link');
+	if(popupLinks.length>0)
 {
 	
 for(let index=0;index<popupLinks.length;index++)
@@ -171,6 +174,10 @@ for(let index=0;index<popupLinks.length;index++)
 }
 	);}
 }
+}
+//вызов метода подменяющего # в атрибуте href на пустоту для того чтобы по клику переходить к попапу
+writeHref();
+
 //метод для объектов закрывающих попап
 const popupCloseIcon = document.querySelectorAll('.close-popup');
 if(popupCloseIcon.length>0)
@@ -258,6 +265,7 @@ const popupActive=document.querySelector('.popup.open');
 popupClose(popupActive);
 }
 })
+/*клонирование и запись из файла */
 let carsArray;
 let description;
 var CloningCard = document.getElementById("clone");
@@ -266,6 +274,7 @@ function SetCardsTitle(clone, carsArray, data) {
 	//клонирование элементов аренды
 	clone.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car0.jpeg" alt="car">`;//установка фоток в первую карту
 	clone.querySelector('.title__car-text').innerHTML = carsArray[0];//название в первую карту
+
 	//создаю клонов кар первой карты
 	for (let i = 1; i <= carsArray.length - 1; i++) {
 		var CloneCard = clone.cloneNode(true);//обозначаю что клонирование глубокое т.е все узлы
@@ -279,9 +288,13 @@ function SetCardsTitle(clone, carsArray, data) {
 			 li.innerHTML=g[h]; //заполняем его
 			 CloneCard.querySelector('.item__car-list').replaceWith(li);//берем старый и меняем на новый
 		}
-	//TODO Разобраться с неработающими кнопками
 		clone.after(CloneCard);//добавляю клонированную карту
 	}
+	//вызов метода подменяющего # в атрибуте href на пустоту для того чтобы по клику переходить к попапу
+	//? т.к при клонировании клонируются только свойства и узлы а события нет их надо прописывать заново
+	writeHref();
+
+
 }
 
 /*--------------------------------------------------------- */
