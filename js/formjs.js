@@ -13,7 +13,7 @@
 	  let form = $("#" + $(this).attr("id"))[0];
 	  let fd = new FormData(form);
 	  $.ajax({
-		 url: "sendmail.php",
+		 url: "files/php/sendmail.php",
 		 type: "POST",
 		 data: fd,
 		 processData: false,
