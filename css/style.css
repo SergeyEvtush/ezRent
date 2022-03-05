@@ -1080,12 +1080,14 @@ border-radius: 50%;
 	text-align: center;
 }
 .rentalcar__title h2{
+	margin: 0px auto;
 	font-family: "Ubuntu";
 font-size: 20px;
 line-height: 1.7;
 font-weight: 700;
 text-transform: uppercase;
 color: #222222;
+max-width: 250px;
 
 }
 .rentalcar__wraper {
@@ -1103,7 +1105,7 @@ color: #222222;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	flex: 0 0 33.333%;
+	flex: 0 1 33.333%;
 	margin: 0 auto;
 	min-width: 33.333%; 
 	padding: 10px;
@@ -1158,7 +1160,14 @@ border-bottom: 1px solid #2222;
 margin: 15px;
 font-weight: 700;
 padding:0px 0px 15px 0px;
-white-space: nowrap;
+
+}
+@media(max-width:850px){
+	.description__title h2{
+
+	white-space: wrap;
+	min-height: 55px;
+	}
 }
 .description__car {
 	width: 100%;
@@ -2353,13 +2362,17 @@ max-width:250px;
 }
 
  @media (max-width: 480px) {
+	.contact-form__input-wrapper{
+		
+		padding:10px 15px 10px 15px;
+	}
 	.contact-form {
 	  max-width: 100%;
 padding:30px 0px;
 	}
 	.contact-form__input-wrapper input{
 		
-		max-width:180px;
+		max-width:280px;
 	
 		}
  }
