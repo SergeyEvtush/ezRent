@@ -2353,6 +2353,11 @@ body.lock {
 	 margin:0px 0px 20px 0px;
 	 padding:10px 50px 10px 50px;
  }
+ .contact-form__input-wrapper_car input{
+	white-space: nowrap; /* Текст не переносится */
+	overflow: hidden; /* Обрезаем всё за пределами блока */
+	text-overflow: ellipsis;/*многточие*/
+ }
  .contact-form__input-wrapper input{
 font-size: 16px;
 line-height: 1.3;

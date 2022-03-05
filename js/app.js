@@ -116,7 +116,7 @@ e.preventDefault();//отключаем работу ссылки
 			}
 		}
 }
-/*аккордеон */
+//!---------------аккордеон--------------------------------- 
 const acc = document.getElementsByClassName("accordion");
 acc[1].classList.add("active");
 var i;
@@ -159,14 +159,23 @@ let unlock = true;
 const timeout = 800;
 //метод подменяющий # в атрибуте href на пустоту для того чтобы по клику переходить к попапу и открывающий попап
 function writeHref(arrayNames) {
+	
 	const popupLinks = document.querySelectorAll('.popup-link');
 	if(popupLinks.length>0) {
 			for(let index=0;index<popupLinks.length;index++){
 				const popupLink=popupLinks[index];
 				popupLink.addEventListener("click", function (e) {
-					const titleCard = arrayNames[index];
-					const popupName = popupLink.getAttribute('href').replace('#','');//здесь мы берем ссылку на которую кликаем и из атрибута href  убирае решетку и заменяем на имя по id
-					let titleCardValue = arrayNames[index];//получаю текст который написан в том объекте кнопку которого мы слушаем
+					/* const titleCard = arrayNames[index]; */
+					const popupName = popupLink.getAttribute('href').replace('#', '');//здесь мы берем ссылку на которую кликаем и из атрибута href  убирае решетку и заменяем на имя по id
+					let titleCardValue;
+					if (index == 0) {
+						titleCardValue = arrayNames[arrayNames.length-1];
+
+					}
+					else { 
+						titleCardValue = arrayNames[index-1];
+					}
+					//получаю текст который написан в том объекте кнопку которого мы слушаем
 					document.getElementById("carBrand").value=titleCardValue;//записываем  полученный текст в инпут который находится в попапе в форме
 					const curentPopup = document.getElementById(popupName);
 					popupOpen(curentPopup);
@@ -271,11 +280,7 @@ function SetCardsTitle(clone, carsArray, data) {
 	//создаю клонов карт первой карты
 	for (let i = 1; i <= carsArray.length - 1; i++) {
 		var CloneCard = clone.cloneNode(true);//обозначаю что клонирование глубокое т.е все узлы
-		const nameCar = document.createElement('h2');
-		nameCar.classList.add('title__car-text');
-		nameCar.classList.add('column__header-offert');
-		nameCar.innerHTML = `${carsArray[i]}`;
-		CloneCard.querySelector('.title__car-text').replaceWith(nameCar);//меняю названия ,беру их из массива в json
+		CloneCard.querySelector('.title__car-text').innerHTML=`${carsArray[i]}`;
 		CloneCard.querySelector('.image__item').innerHTML = `<img src="files/rentalcars/car${i}.jpeg" alt="car">`;//меняю путь к фоткам i элемент цифра в фотке в фотке
 		var g = getArrayOfTheCarDescr(getDescriptionOfCars(setNamesOfCars(data), data, carsArray[i]));//метод получения массива описаний машин
 		//бегаю по этому массиву и получаю данные для списка характеристик машин
@@ -285,10 +290,13 @@ function SetCardsTitle(clone, carsArray, data) {
 			 CloneCard.querySelector('.item__car-list').replaceWith(li);//берем старый и меняем на новый
 		}
 		clone.after(CloneCard);//добавляю клонированную карту
+		
 	}
 	//вызов метода подменяющего # в атрибуте href на пустоту для того чтобы по клику переходить к попапу
 	//? т.к при клонировании клонируются только свойства и узлы а события нет их надо прописывать заново
-	writeHref(carsArray);
+	writeHref(carsArray.reverse());
+	console.log(carsArray.length);
+	
 }
 
 /*--------------------------------------------------------- */

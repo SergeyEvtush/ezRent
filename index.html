@@ -30,12 +30,12 @@
 	</div>
 	<nav class="header__menu menu__body">
 		<ul class="menu__list">
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link">Главная</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link">Приемущества</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link">Прокат авто</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link">FAQ</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link">Отзывы</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link">Контакты </a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".slider__wraper" >Главная</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".advantages__content">Приемущества</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".rentalcar__container">Прокат авто</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".information__wraper">FAQ</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".reviews__container">Отзывы</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".wraper__footer-container">Контакты </a></li>
 			
 		</ul>
 	</nav>
@@ -43,7 +43,7 @@
 	</div><!---теперь при установке изображения необходимо писать @ т.к усиановлен плагин который избавляет от зависимости вложенности-->
 </header>
 	<main class="page">
-		<section class="main__slider ">
+		<section class="main__slider">
 			<div class="slider__wraper">
 				<div class="slider__item ">
 					<div class="image__block">
@@ -78,6 +78,8 @@
 				<h2 class="sale__title">Выгодное предложение</h2>
 				<p class="sale__paragraph">При бронировании от 3-х дней доставка в Калининград / Зеленоградск бесплатно !</p>
 				<form action="">
+					<div class="preloader"></div>
+					  <p class="contact-form__message"></p>
 					<input type="text" class="form__input" placeholder="Введите имя*">
 					<input type="text" class="form__input" placeholder="Телефон*">
 					<input type="text" class="form__input" placeholder="Срок аренды" >
@@ -118,8 +120,6 @@
 		<ul class="block-content__list">
 			<li class="content-list__item">Все наши автомобили оснащены держателями, <!-- зарядными устройствами для телефонов, влажными салфетками.</li>
 			<li class="content-list__item">На связи 24/7.</li> -->
-			
-		
 		</ul>
 	</div>
 </div>
