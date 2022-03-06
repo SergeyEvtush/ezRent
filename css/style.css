@@ -2438,10 +2438,7 @@ body.lock {
 	 justify-content: center;
 	 padding:50px 0px 50px 0px;
  }
- .items-form__wraper.delmargin{
-	padding:10px 0px 0px 0px;
-	margin-bottom: -50px;
- }
+ 
  .contact-form__input-wrapper{
 	 display: flex;
 	 align-items: center;
@@ -2474,12 +2471,17 @@ border-radius: 20px;
 
 	padding:10px 100px 10px 10px;
 }
-
+.items-form__wraper.delmargin{
+	padding:0px 0px 0px 0px;
+	
+ }
  @media (max-width: 480px) {
 	.contact-form__input-wrapper{
 		
 		padding:10px 15px 10px 15px;
 	}
+
+	
 	.contact-form {
 	  max-width: 100%;
 padding:30px 0px;
@@ -2489,6 +2491,10 @@ padding:30px 0px;
 		max-width:280px;
 	
 		}
+		.items-form__wraper.delmargin input{
+			margin:0px 0px 0px 0px;
+			
+		 }
  }
  .contact-form__title {
 	text-transform: uppercase;
@@ -2498,7 +2504,12 @@ padding:30px 0px;
 	font-size: 18px;
 	margin: 0 0 30px;
  }
- 
+ @media(max-width:470px){
+	.contact-form__input-wrapper.delmargin{
+		
+		padding:3px 15px 3px 15px;
+	}
+ }
  @media (max-width: 430px) {
 	.contact-form__title {
 	  font-size: 16px;
