@@ -75,8 +75,8 @@ if(iconMenu)
 	//добавляем им класс _active
 iconMenu.addEventListener("click",function(e){
 	document.body.classList.toggle('_lock');	
-iconMenu.classList.toggle('_active');
-menuBody.classList.toggle('_active');
+iconMenu.classList.toggle('menu_active');
+menuBody.classList.toggle('menu_active');
 });
 }
 //прокрутка при клике
@@ -97,12 +97,12 @@ const gotoBlock = document.querySelector(menuLink.dataset.goto);
 //вычисляем положение объекта с учетом высоты шапки
 const gotoBlockValue=/*местоположение объекта от верха в пикселях*/gotoBlock.getBoundingClientRect().top+/*количество прокрученных пикселей*/pageYOffset-/*высота шапки*/document.querySelector('header').offsetHeight;
 /*проверка нужна для того чтобы при открытом меню при прокрутке к нужному разделу меню закрывалось */
-if(iconMenu.classList.contains('_active'))
+if(iconMenu.classList.contains('menu_active'))
 {
 	/*убираем классы которые добавили при открытии меню */
 	document.body.classList.remove('_lock');	
-iconMenu.classList.remove('_active');
-menuBody.classList.remove('_active');
+iconMenu.classList.remove('menu_active');
+menuBody.classList.remove('menu_active');
 
 }
 
@@ -289,12 +289,14 @@ function SetCardsTitle(clone, carsArray, data) {
 			 li.innerHTML=g[h]; //заполняем его
 			 CloneCard.querySelector('.item__car-list').replaceWith(li);//берем старый и меняем на новый
 		}
+	
 		clone.after(CloneCard);//добавляю клонированную карту
 		
 	}
 	//вызов метода подменяющего # в атрибуте href на пустоту для того чтобы по клику переходить к попапу
 	//? т.к при клонировании клонируются только свойства и узлы а события нет их надо прописывать заново
 	writeHref(carsArray.reverse());
+	
 	console.log(carsArray.length);
 	
 }
@@ -361,8 +363,52 @@ function getArrayOfTheCarDescr(arrayDescription) {
 		}
 }
 	/*-------------------------------------------------- */
+//!--------------Анимация при скролле------------------------
 
+	const animItems = document.querySelectorAll('._anim-items');//класс объектов которые будут анимироваться
+	if (animItems.length > 0) {
+		window.addEventListener('scroll', animOnScroll);//слушаем событи скролл,когда он происходит запускаем метод animOnScroll
+		function animOnScroll(params) {
+			for (let i = 0; i < animItems.length; i++) {
+				const animItem = animItems[i];
+				const animItemHeight = animItem.offsetHeight;
+				const animItemOffset = offset(animItem).top;//с пом функции(см ниже) растояние от верха экрана до объекта 
 
+				const animStart = 4;//коэффициент регулирующий момент старта анимации
+				//расчет точки начала анимации
+				let animItemPoint = window.innerHeight - animItemHeight / animStart;//высота окна браузера минус высота объекта поделенную на коэффициент регулирующий момент начала старта анимации
+				//если объект по высоте больше чем высота окна браузера то расчет точки начала анимации будет считаться по формуле ниже
+				if (animItemHeight > window.innerHeight) {
+					animItemPoint = window.innerHeight - window.innerHeight / animStart;
+				}
+				//если пркручено больше чем позиция объекта минус точка старта и меньше чем позиция объекта минус его высота
+				if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+					animItem.classList.add('_activeScroll');
+				} else {
+					if (!animItem.classList.contains('_anim-no-hide')) {
+						animItem.classList.remove('_activeScroll');
+					}
+	
+	
+				}
+			}
+
+		}
+		//функция вычисляющая растояние от верха экрана до начала объекта
+		//или гот правой части экрана до объекта
+		function offset(el) {
+			const rect = el.getBoundingClientRect(),
+				scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+				scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			return { top: rect.top + scrollTop, left: rect.left + screenLeft }
+		}
+		//метод задержки анимации
+		setTimeout(() => {
+			//вызываю метод "изначально" для того чтобы анимация была сразу при загрузке окна
+			animOnScroll();
+		}, 300);
+	
+	} 
 
 
 

@@ -10,7 +10,7 @@
 <body>
 	<div class="wraper">
 		
-	<header class="header">
+	<header class="header _anim-items">
 	<div class="header__info lock-padding">
 		<div class="info__container __container">
 			<div class="info__item">
@@ -30,12 +30,12 @@
 	</div>
 	<nav class="header__menu menu__body">
 		<ul class="menu__list">
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".slider__wraper" >Главная</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".advantages__content">Приемущества</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".rentalcar__container">Прокат авто</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".information__wraper">FAQ</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".reviews__container">Отзывы</a></li>
-			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link" data-goto=".wraper__footer-container">Контакты </a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link link-style" data-goto=".slider__wraper" >Главная</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link link-style" data-goto=".advantages__content">Приемущества</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link link-style" data-goto=".rentalcar__container">Прокат авто</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link link-style" data-goto=".information__wraper">FAQ</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link link-style" data-goto=".reviews__container">Отзывы</a></li>
+			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link link-style" data-goto=".wraper__footer-container">Контакты </a></li>
 			
 		</ul>
 	</nav>
@@ -43,16 +43,16 @@
 	</div><!---теперь при установке изображения необходимо писать @ т.к усиановлен плагин который избавляет от зависимости вложенности-->
 </header>
 	<main class="page">
-		<section class="main__slider">
+		<section class="main__slider ">
 			<div class="slider__wraper">
 				<div class="slider__item ">
-					<div class="image__block">
+					<div class="image__block _anim-items _anim-no-hide">
 						<img src="img/SliderMain/Rio_pc.jpg" alt="car" class="item__image" id="image">
 						<div class="item__content __container">
 							<div class="test">
-							<div class="content__block">
+							<div class="content__block _anim-items">
 								<div class="bg__block-content">
-								<div class="title-content__block">
+								<div class="title-content__block ">
 								<a href="#" class="watsap__link"><img src="img/SliderMain/icons/Whatsapp.png" alt="">+7(963) 299-54-47</a>
 								<h4 class="content__title">Быстрая аренда автомобиля</h4>
 							</div>
@@ -62,7 +62,7 @@
 								<h3 class="coast__rental">В сутки от: <span class="coast">2000р.</span></h3>
 							</div>
 								<div class="block__btn">
-									<a href="#" class="btn__link">выбрать автомобиль</a>
+									<a href="#" class="btn__link menu__link" data-goto=".rentalcar__container">выбрать автомобиль</a>
 									</div>
 								
 								</div>
@@ -73,8 +73,8 @@
 			</div>
 		</section>
 	<section class="rental__sale">
-		<div class="sale__container __container">
-			<div class="sale__content">
+		<div class="sale__container __container ">
+			<div class="sale__content _anim-items">
 				<h2 class="sale__title">Выгодное предложение</h2>
 				<p class="sale__paragraph">При бронировании от 3-х дней доставка в Калининград / Зеленоградск бесплатно !</p>
 				<form action="">
@@ -88,10 +88,10 @@
 			</div>
 			<div class="advatanges __container">
 				<div class="advantages__content">
-					<h2 class="advantages__title sale__title">приемущества</h2>
+					<h2 class="advantages__title sale__title _anim-items">приемущества</h2>
 					<!-- <h2 class="advantages__title">Почему у нас выгоднее?</h2> -->
 					<div class="advantages__cards-block ">
-<div class="card-block__item">
+<div class="card-block__item _anim-items">
 	<div class="card-block__image"><img src="img/advantages/dollar.png" alt=""></div>
 	<div class="card-block__content">
 		<h4 class="block-content__title">Выгодно</h4>
@@ -103,7 +103,7 @@
 		</ul>
 	</div>
 </div>
-<div class="card-block__item">
+<div class="card-block__item _anim-items">
 	<div class="card-block__image"><img src="img/advantages/car.png" alt=""></div>
 	<div class="card-block__content">
 		<h4 class="block-content__title">Быстро</h4>
@@ -113,7 +113,7 @@
 		</ul>
 	</div>
 </div>
-<div class="card-block__item">
+<div class="card-block__item _anim-items">
 	<div class="card-block__image"><img src="img/advantages/lightning.png" alt=""></div>
 	<div class="card-block__content">
 		<h4 class="block-content__title">Комфортно</h4>
@@ -123,7 +123,7 @@
 		</ul>
 	</div>
 </div>
-<div class="card-block__item">
+<div class="card-block__item _anim-items">
 	<div class="card-block__image"><img src="img/advantages/safety.png" alt=""></div>
 	<div class="card-block__content">
 		<h4 class="block-content__title">Безопасно</h4>
@@ -176,7 +176,7 @@
 	</section>	
 	<section class="questions">
 		<div class="questions__wraper">
-			<div class="questions__container __container">
+			<div class="questions__container __container _anim-items">
 				<div class="questions__content">
 					<a href="#" class="questions__link">
 						Остались вопросы?
@@ -192,13 +192,12 @@
 		</div>
 	</section>	
 <section class="rentalcar">
-	<div class="rentalcar__wraper">
+	<div class="rentalcar__wraper _anim-items">
 		<div class="rentalcar__container __container">
 			<div class="rentalcar__title">
 				<h2>Прокат авто</h2>
 			</div>
-			<div class="images__container">
-	
+			<div class="images__container ">
 	<div class="image__block-carrental"id="clone">
 		<div class="image__item" >
 			<img src="files/rentalcars/kiaRio2.webp" alt="car">
@@ -226,7 +225,7 @@
 	</div>
 </section>
 <section class="special-approach">
-	<div class="special-approach__container __container">
+	<div class="special-approach__container __container _anim-items">
 		<div class=" container__content">
 			<h2 class=" special-approach__title">ВСЕГДА НА СВЯЗИ И РАДЫ <span class="green__span">ПОМОЧЬ</span> </h2>
 			<p class="special-approach__parargraph">Калининградская область интересна своими достопримечательностями и Балтийским морем. Отправляясь в путешествие на новом арендованном автомобиле вы сможете без труда побывать во всех уголках Янтарного края, старинном Кенигсберге, курортных городах на побережье и заповедной зоне Куршской косы. Мы всегда поможем выбрать туристическую программу и подскажем где можно вкусно и недорого поесть.</p>
@@ -264,7 +263,7 @@
 
 </section>
 <section class="clients">
-	<div class="clients__wraper">
+	<div class="clients__wraper _anim-items">
 	<div class="clients__container __container">
 <div class="content__block-clients">
 	<div class="block__item">
@@ -286,7 +285,7 @@
 <section class="information">
 	<div class="information__wraper">
 	<div class="information__container __container">
-		<div class="block-foto">
+		<div class="block-foto _anim-items">
 		<div class="foto__block">
 			<div class="foto__item-block">
 				<img src="img/information/solyaris_side.jpg" alt="car"></div>
@@ -300,7 +299,7 @@
 
 		</div>
 	</div>
-		<div class="tab__block">
+		<div class="tab__block _anim-items">
 			<div class="center">
 			<div class="center__item">
 				<button class="accordion">Условия аренды</button>
