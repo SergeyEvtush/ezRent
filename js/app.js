@@ -420,16 +420,18 @@ function getArrayOfTheCarDescr(arrayDescription) {
 
 	const form = document.getElementById('form-contact');
 	console.log(form);
-const formB = document.getElementsByClassName('popup__body');
+const formB = document.getElementsByClassName('contact-form__input_car');
 form.addEventListener('focusin', function (event) { 
-	const animItemHeight = form.offsetHeight;
+	/* const animItemHeight = form.offsetHeight;
 	console.log(animItemHeight);
 	window.scrollBy({
 		top: animItemHeight / 2,
-		behavior: 'smooth'
+		behavior: 'smooth' */
+	form.scrollIntoView();
+		console.log(formB);
 		
 	});
-	alert('scroll!');
+	
 		/* form.classList.add("test"); */
 		/* form.scrollTo({
 			top: 300,
@@ -437,9 +439,9 @@ form.addEventListener('focusin', function (event) {
 			behavior:'smooth'
 		}); */
 		
-			 console.log('focus on!'); 
+		/* 	 console.log('focus on!'); 
 		});
-
+ */
 
 
  
