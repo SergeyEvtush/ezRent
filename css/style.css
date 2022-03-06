@@ -413,7 +413,7 @@ position: relative;
   box-shadow: 0 3px 5px rgba(1, 16, 25, 0.1);
   position: relative;
   margin: 0px 0px 30px 0px;
-  z-index: 20;
+  z-index: 10;
   opacity: 0;
   transition: all 1s ease-in;
 }
@@ -2078,7 +2078,7 @@ body.lock {
  }
  @media(max-width:768px){
 	.popup {
-		padding:0px 0px 20px 0px;
+		padding:30px 0px 0px 0px;
 	  
 	}
  }
