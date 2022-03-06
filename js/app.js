@@ -427,7 +427,7 @@ form.addEventListener('focusin', function (event) {
 	window.scrollBy({
 		top: animItemHeight / 2,
 		behavior: 'smooth' */
-	form.scrollIntoView();
+	form.scrollIntoView({ block: "start", behavior: "smooth" });
 		console.log(formB);
 		
 	});
