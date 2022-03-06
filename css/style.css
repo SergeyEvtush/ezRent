@@ -381,6 +381,12 @@ position: relative;
 .block__btn .btn__link {
 	max-width: 300px;
 	padding: 5px 20px;
+	background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
+}
+.block__btn .btn__link:hover {
+	max-width: 300px;
+	padding: 5px 20px;
+	background: #000;
 }
 @media(max-width:1200px){
 	.btn__link {
@@ -468,7 +474,7 @@ opacity: 1;
   align-items: center;
 }
 
-.btn__link.btn__link {
+.btn__link {
 	display: inline-block;
 	 line-height: 3.14; 
   background: #000;
@@ -484,14 +490,12 @@ opacity: 1;
 	
 	
 }
-.btn__link.btn__link:hover {
+.button__rental-sale .btn__link:hover {
   background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
   transition: all 0.3s ease-in-out 0s;
 }
 
-.form .btn__link {
-  background: #000;
-}
+
 
 .form__input {
   border: 1px solid rgba(0, 0, 0, 0.521);
@@ -1141,6 +1145,15 @@ border-radius: 50%;
 .rentalcar__title {
 	margin: 0px auto 45px;
 	text-align: center;
+}
+@media(max-width:768px){
+	.rentalcar__title {
+		margin: 0px auto 20px;
+		text-align: center;
+	}
+	.rentalcar__container {
+		padding:45px 5px 180px 5px;
+	}
 }
 .rentalcar__title h2{
 	margin: 0px auto;
