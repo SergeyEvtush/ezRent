@@ -270,18 +270,6 @@ document.addEventListener('keydown', function (e) {
 });
 
 
-const form = document.getElementById('form-contact');
-console.log(form);
-
-form.addEventListener('focusin', function (event) { 
-	/* form.classList.add("test"); */
-	form.scrollTo({
-		top: 300,
-		left: 0,
-		behavior:'smooth'
-	});
-		 console.log('focus on!'); 
-	});
 
 
 
@@ -428,8 +416,27 @@ function getArrayOfTheCarDescr(arrayDescription) {
 		}, 300);
 	
 	} 
+/*------------------------------------------------- */
 
-
+	const form = document.getElementById('form-contact');
+	console.log(form);
+const formB = document.getElementsByClassName('popup__body');
+form.addEventListener('focusin', function (event) { 
+	const animItemHeight = form.offsetHeight;
+	console.log(animItemHeight);
+	window.scrollBy({
+		top: animItemHeight / 2,
+		behavior:'smooth'
+	});
+		/* form.classList.add("test"); */
+		/* form.scrollTo({
+			top: 300,
+			left: 0,
+			behavior:'smooth'
+		}); */
+		
+			 console.log('focus on!'); 
+		});
 
 
 
