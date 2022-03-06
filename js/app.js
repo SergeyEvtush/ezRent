@@ -429,7 +429,8 @@ for(let i=0;i<inpName.length;i++)
 		const labelIn = document.getElementsByClassName('label__input-date');
 		for(let i=0;i<labelIn.length;i++)
 		{
-			labelIn[i].style.fontSize='0px'
+			labelIn[i].style.fontSize = '0px'
+			labelIn[i].style.display = 'none';
 		}
 		
 		
