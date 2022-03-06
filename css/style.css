@@ -1485,7 +1485,7 @@ padding: 120px 0px 100px;
 color: #FFF;
 text-align: center;
 opacity: 0;
-transform: translateY(100%);
+transform: translateY(10%);
 transition: all 0.8s ease 0.1s;
 }
 .clients__wraper._activeScroll{
@@ -2078,7 +2078,7 @@ body.lock {
  }
  @media(max-width:768px){
 	.popup {
-		padding:0px 0px 300px 0px;
+		padding:0px 0px 20px 0px;
 	  
 	}
  }
