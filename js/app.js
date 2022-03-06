@@ -426,8 +426,10 @@ form.addEventListener('focusin', function (event) {
 	console.log(animItemHeight);
 	window.scrollBy({
 		top: animItemHeight / 2,
-		behavior:'smooth'
+		behavior: 'smooth'
+		
 	});
+	alert('scroll!');
 		/* form.classList.add("test"); */
 		/* form.scrollTo({
 			top: 300,

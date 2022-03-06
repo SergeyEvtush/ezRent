@@ -2069,7 +2069,7 @@ body.lock {
  }
  
  .popup__content {
-	
+	min-height: 100%;
 	max-width: 100%;
 	padding: 30px;
 	display: flex;
