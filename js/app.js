@@ -429,7 +429,7 @@ form.addEventListener('focusin', function (event) {
 		behavior: 'smooth' */
 	form.scrollIntoView({ block: "start", behavior: "smooth" });
 		console.log(formB);
-		
+	
 	});
 	
 		/* form.classList.add("test"); */
