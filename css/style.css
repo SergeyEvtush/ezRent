@@ -2417,7 +2417,7 @@ body.lock {
 	}
  }
  .contact-form {
-	
+	min-height: 100%;
 	width: 100%;
 	max-width: 460px;
 	padding: 10px;
@@ -2427,7 +2427,7 @@ body.lock {
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
  }
  .contact-form.test{
-	position: fixed;
+	
  }
  .items-form__wraper{
 	 display: flex;

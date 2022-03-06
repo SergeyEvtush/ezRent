@@ -274,8 +274,13 @@ const form = document.getElementById('form-contact');
 console.log(form);
 
 form.addEventListener('focusin', function (event) { 
-	form.classList.add("test");
-		 console.log('focus left!'); 
+	/* form.classList.add("test"); */
+	form.scrollTo({
+		top: 300,
+		left: 0,
+		behavior:'smooth'
+	});
+		 console.log('focus on!'); 
 	});
 
 
