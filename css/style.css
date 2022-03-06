@@ -1186,7 +1186,7 @@ background: #61a946;
 .rentalcar__title h2::after{
 	content:"";
 position: absolute;
-margin-left: 7px;
+margin-left: 6px;
 width: 4px;
 height: 100%;
 top: 0;
