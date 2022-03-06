@@ -447,6 +447,7 @@ opacity: 1;
   background: #fff;
   position: absolute;
   left: 5px;
+  top: 20%;
 }
 
 .sale__title::after {
@@ -457,6 +458,7 @@ opacity: 1;
   background: #fff;
   position: absolute;
   right: 5px;
+  top: 20%;
 }
 
 .sale__paragraph {
@@ -1164,7 +1166,27 @@ font-weight: 700;
 text-transform: uppercase;
 color: #222222;
 max-width: 250px;
-
+position: relative;
+}
+.rentalcar__title h2::before{
+	content:"";
+position: absolute;
+left: 45px;
+width: 4px;
+height: 100%;
+top: 0;
+display: inline-block;
+background: #61a946;
+}
+.rentalcar__title h2::after{
+	content:"";
+position: absolute;
+right: 45px;
+width: 4px;
+height: 100%;
+top: 0;
+display: inline-block;
+background: #61a946;
 }
 .rentalcar__wraper {
 	background: rgb(231, 229, 229);
@@ -1389,7 +1411,7 @@ line-height: 24px;
 font-weight: 700;
 text-transform: uppercase;
 text-align: center;
-margin: 20px 20px 100px 20px;
+margin: 20px 20px 20px 20px;
 
 }
 /*классы слайдера*/
