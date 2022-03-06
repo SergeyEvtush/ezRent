@@ -2144,40 +2144,7 @@ body.lock {
 	z-index: 999;
 	
  }
-/*  
- .contact-form {
-	width: 100%;
-	max-width: 560px;
-	padding: 60px;
-	background: linear-gradient(45deg, #141313 25%, transparent 25%, transparent 75%, #111111 75%), linear-gradient(45deg, #1a1919 25%, transparent 25%, transparent 75%, #111111 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #22221e, #0e0d0d);
-	background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
-	border-radius: 10px;
-	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
- } */
- 
-/*  @media (max-width: 946px) {
-	.form-wrapper {
-	  position: absolute;
-	  visibility: hidden;
-	  transform: translate(-100%);
-	  opacity: 0;
-	  transition: all 0.3s ease;
-	}
- 
-	.form-wrapper.__onActive {
-	  visibility: visible;
-	  transform: translate(0);
-	  opacity: 1;
-	}
-} */
-/* .contact-form__title {
-	text-transform: uppercase;
-	line-height: 1.5;
-	text-align: center;
-	color: #60ad45;
-	font-size: 18px;
-	margin: 0 0 60px;
- } */
+
  
  .contact-form__message {
 	text-align: center;
@@ -2433,9 +2400,7 @@ body.lock {
 	border-radius: 10px;
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
  }
- .contact-form.test{
-	
- }
+ 
  .items-form__wraper{
 	 display: flex;
 	 flex-direction: column;
@@ -2496,10 +2461,11 @@ padding:30px 0px;
 		max-width:280px;
 	
 		}
-		.items-form__wraper.delmargin input{
-			margin:0px 0px 0px 0px;
-			
-		 }
+		
+ }
+ .items-form__wraper.delmargin input{
+	margin:0px 0px 0px 0px;
+	
  }
  .contact-form__title {
 	text-transform: uppercase;
@@ -2509,15 +2475,16 @@ padding:30px 0px;
 	font-size: 18px;
 	margin: 0 0 30px;
  }
+ .contact-form__input-wrapper.delmargin{
+		
+	padding:3px 15px 3px 15px;
+}
  @media(max-width:470px){
 	.contact-form__input-wrapper_date input{
 
-		padding:10px 100px 10px 10px;
+		padding:10px 10px 10px 10px;
 	}
-	.contact-form__input-wrapper.delmargin{
-		
-		padding:3px 15px 3px 15px;
-	}
+	
  }
  @media (max-width: 430px) {
 	.contact-form__title {
@@ -2625,13 +2592,14 @@ padding:30px 0px;
 	  padding: 15px;
 	}
  } */
+ .contact-form.delmargin {
+	padding: 10px 15px;
+ }
  @media (max-width: 480px) {
 	.contact-form {
 	  padding: 30px 15px;
 	}
-	.contact-form.delmargin {
-		padding: 10px 15px;
-	 }
+	
 	.contact-form__title {
 	  font-size: 16px;
 	}

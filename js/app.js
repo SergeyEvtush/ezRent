@@ -419,13 +419,16 @@ function getArrayOfTheCarDescr(arrayDescription) {
 /*------------------------------------------------- */
 const wraperItems = document.getElementsByClassName('items-form__wraper');  
 const form = document.getElementById('form-contact');
-const popupB = document.getElementsByClassName('popup__body');
+/* const popupB = document.getElementsByClassName('popup__body'); */
 const inpName = document.getElementsByClassName('contact-form__input-wrapper_name');
 const inpPhone = document.getElementsByClassName('contact-form__input_phone');
-console.log(form);
-for(let i=0;i<inpName.length;i++)
+const wraperInput = document.getElementsByClassName('contact-form__input-wrapper');
+const formB = document.getElementsByClassName('contact-form__input_car');
+
+function delLabel(inputDelingLabel) {
+	for(let i=0;i<inputDelingLabel.length;i++)
 {
-	inpName[i].addEventListener('focusin', function (event) {
+	inputDelingLabel[i].addEventListener('focusin', function (event) {
 		const labelIn = document.getElementsByClassName('label__input-date');
 		for(let i=0;i<labelIn.length;i++)
 		{
@@ -436,36 +439,26 @@ for(let i=0;i<inpName.length;i++)
 		
 	 });
 }
-const wraperInput = document.getElementsByClassName('contact-form__input-wrapper');
-const formB = document.getElementsByClassName('contact-form__input_car');
-form.addEventListener('focusin', function (event) { 
-	for(let i=0;i<formB.length;i++)
-	{formB[i].scrollIntoView({ block: "end", behavior: "smooth" })}
-		;
-		console.log(wraperInput.length);
-		console.log(wraperItems);
-		console.log(popupB.length);
+}
+
+if (document.body.classList.contains('_touch')) { 
+	delLabel(inpName);
+	delLabel(inpPhone);
+	form.addEventListener('focusin', function (event) { 
 		form.classList.add('delmargin');
+		for (let i = 0; i < formB.length; i++){
+			formB[i].scrollIntoView({ block: "end", behavior: "smooth" });
+			}
 		for (let i = 0; i < wraperItems.length; i++) {
 			wraperItems[i].classList.add('delmargin');
-		 }
-		
+			 }
 			for (let i = 0; i < wraperInput.length; i++) {
-					wraperInput[i].classList.add('delmargin');
-	 			}
-	
-	});
-	
-		/* form.classList.add("test"); */
-		/* form.scrollTo({
-			top: 300,
-			left: 0,
-			behavior:'smooth'
-		}); */
-		
-		/* 	 console.log('focus on!'); 
+			wraperInput[i].classList.add('delmargin');
+			 }
 		});
- */
+}
+
+	
 
 
  
