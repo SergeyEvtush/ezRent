@@ -419,16 +419,22 @@ function getArrayOfTheCarDescr(arrayDescription) {
 /*------------------------------------------------- */
 
 	const form = document.getElementById('form-contact');
-	console.log(form);
+console.log(form);
+const wraperInput = document.getElementsByClassName('contact-form__input-wrapper');
 const formB = document.getElementsByClassName('contact-form__input_car');
 form.addEventListener('focusin', function (event) { 
+console.log(wraperInput.length);
+
+	for (let i = 0; i < wraperInput.length; i++) {
+		wraperInput[i].classList.toggle('delmargin');
+	 }
 	/* const animItemHeight = form.offsetHeight;
 	console.log(animItemHeight);
 	window.scrollBy({
 		top: animItemHeight / 2,
 		behavior: 'smooth' */
-	form.scrollIntoView({ block: "start", behavior: "smooth" });
-		console.log(formB);
+/* 	form.scrollIntoView({ block: "start", behavior: "smooth" });
+		console.log(formB); */
 	
 	});
 	
