@@ -425,7 +425,10 @@ const popupB = document.getElementsByClassName('popup__body');
 console.log(form);
 const wraperInput = document.getElementsByClassName('contact-form__input-wrapper');
 const formB = document.getElementsByClassName('contact-form__input_car');
-	form.addEventListener('focusin', function (event) { 
+form.addEventListener('focusin', function (event) { 
+	for(let i=0;i<formB.length;i++)
+	{formB[i].scrollIntoView({ block: "end", behavior: "smooth" })}
+		;
 		console.log(wraperInput.length);
 		console.log(wraperItems);
 		console.log(popupB.length);
@@ -437,7 +440,7 @@ const formB = document.getElementsByClassName('contact-form__input_car');
 			for (let i = 0; i < wraperInput.length; i++) {
 					wraperInput[i].classList.add('delmargin');
 	 			}
-	form.scrollIntoView({ block: "start", behavior: "smooth" });
+	
 	});
 	
 		/* form.classList.add("test"); */
