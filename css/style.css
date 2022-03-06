@@ -2069,6 +2069,7 @@ body.lock {
  }
  
  .popup__content {
+	 overflow: hidden;
 	min-height: 100%;
 	max-width: 100%;
 	padding: 30px;
