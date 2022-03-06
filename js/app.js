@@ -262,12 +262,26 @@ setTimeout(function(){
 	unlock=true;
 },timeout);
 }
-document.addEventListener('keydown',function(e){
-if(e.which===27){
-const popupActive=document.querySelector('.popup.open');
-popupClose(popupActive);
-}
-})
+document.addEventListener('keydown', function (e) {
+	if (e.which === 27) {
+		const popupActive = document.querySelector('.popup.open');
+		popupClose(popupActive);
+	}
+});
+
+
+const form = document.getElementById('form-contact');
+console.log(form);
+
+form.addEventListener('focusin', function (event) { 
+	form.classList.add("test");
+		 console.log('focus left!'); 
+	});
+
+
+
+
+
 //!------------------------клонирование и запись из файла-----------------
 let carsArray;
 let description;
