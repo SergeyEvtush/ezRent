@@ -420,9 +420,21 @@ function getArrayOfTheCarDescr(arrayDescription) {
 const wraperItems = document.getElementsByClassName('items-form__wraper');  
 const form = document.getElementById('form-contact');
 const popupB = document.getElementsByClassName('popup__body');
-
-/* const inputItem = document.getElementsByClassName('contact-form-input__item'); */
+const inpName = document.getElementsByClassName('contact-form__input-wrapper_name');
+const inpPhone = document.getElementsByClassName('contact-form__input_phone');
 console.log(form);
+for(let i=0;i<inpName.length;i++)
+{
+	inpName[i].addEventListener('focusin', function (event) {
+		const labelIn = document.getElementsByClassName('label__input-date');
+		for(let i=0;i<labelIn.length;i++)
+		{
+			labelIn[i].style.fontSize='0px'
+		}
+		
+		
+	 });
+}
 const wraperInput = document.getElementsByClassName('contact-form__input-wrapper');
 const formB = document.getElementsByClassName('contact-form__input_car');
 form.addEventListener('focusin', function (event) { 
