@@ -76,9 +76,19 @@ body._lock {
 .menu__list > li {
   position: relative;
 }
-
-.link-style:hover {
-  text-decoration: underline;
+.link-style{
+	position: relative;
+}
+.link-style:hover::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  background:  #61a946;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: all 0.5s ease;
 }
 
 
@@ -204,14 +214,14 @@ transform: translate(100%);
   overflow: hidden;
   padding: 0px 0px 50% 0px;
   overflow: hidden;
- /*  opacity: 0.7;
+  opacity: 0.7;
   transform: translateY(-100%);
-  transition: all 0.5s ease-in-out; */
+  transition: all 0.5s ease-in-out;
 }
-/* .image__block._activeScroll {
+.image__block._activeScroll {
 	transform: translateY(0);
 	opacity: 1;
- } */
+ }
 /* .image__block::before{
 	content: "";
 	width:100%;
@@ -1139,12 +1149,8 @@ max-width: 250px;
 .rentalcar__wraper {
 	background: rgb(231, 229, 229);
 	position: relative;
-	transition: all 0.5s ease;
-	transform: translateX(100%);
  }
- .rentalcar__wraper._activeScroll{
-	transform: translateY(0);
- }
+
  
  
  .image__container {
@@ -1202,9 +1208,16 @@ opacity: 1;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	opacity: 0;
+	transition: all 0.8s ease-in-out;
+	transform: translateY(10%);
 
 }
 
+.images__container._activeScroll{
+	 opacity: 1;
+	transform: translateY(0);
+ }
 
 .description__title h2{
 	font-size: 15px;
@@ -1465,6 +1478,13 @@ background-size: cover;
 padding: 120px 0px 100px;
 color: #FFF;
 text-align: center;
+opacity: 0;
+transform: translateY(100%);
+transition: all 0.8s ease 0.1s;
+}
+.clients__wraper._activeScroll{
+	opacity: 1;
+	transform: translateY(0);
 }
 @media(max-width:768px){
 	.clients__wraper {
@@ -1537,6 +1557,13 @@ justify-content: center;
 	 max-width: 100%; 
 	display: flex;
 	padding:0px 0px 0px 0px;
+	transform: translateX(-100%);
+	opacity: 0;
+	transition: all 0.5s ease-in-out 0.3s;
+}
+.block-foto._activeScroll{
+	opacity: 1;
+	transform: translateX(0);
 }
 .foto__block {
 	
@@ -1582,28 +1609,27 @@ max-width: 100%;
 		justify-content: center;
 		padding:0px 40px 0px 40px;
 		}
-	
-	
 }
-/*аккордеон*/
-/* .tab__block {
-	/* flex: 1 1 50%; */
-/* 	max-width: 50%;  */
-	/* margin-left: 15px; */
 
-/* }
-.center { */
-	/* max-width: 600px; */
-/* 	max-width: 100%;
-	margin:0px auto 0px auto; */
- /*} */
 
 
 /*test--------------------------------------------*/
 .tab__block{
 	max-width: 50%; 
 	margin-left: 15px;
+	transform: translateX(100%);
+	opacity: 0;
+	transition: all 0.5s ease-in-out 0.3s;
 }
+
+.tab__block._activeScroll{
+	opacity: 1;
+	transform: translateX(0);
+}
+
+
+
+
 .center{
 	width: 100%;
 	
