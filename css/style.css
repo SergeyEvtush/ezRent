@@ -906,10 +906,7 @@ border-radius: 50%;
     margin: 10px calc(5px + 0 * (100vw - 320px) / 880) 0px 0px;
   }
 
-  .sale__title {
-    font-size: calc(16px + 4 * (100vw - 320px) / 880);
-    margin: 0px 0px calc(10px + 20 * (100vw - 320px) / 880) 0px;
-  }
+  
 
   .sale__paragraph {
     font-size: 18px;
@@ -1148,6 +1145,7 @@ border-radius: 50%;
 	margin: 0px auto 45px;
 	text-align: center;
 }
+
 @media(max-width:768px){
 	.rentalcar__title {
 		margin: 0px auto 20px;
@@ -1168,10 +1166,17 @@ color: #222222;
 max-width: 250px;
 position: relative;
 }
+@media(max-width:1200px){
+	.rentalcar__title h2 {
+		font-size: calc(16px + 4 * (100vw - 320px) / 880);
+		
+	 }
+  
+}
 .rentalcar__title h2::before{
 	content:"";
 position: absolute;
-left: 45px;
+margin-left: -10px;
 width: 4px;
 height: 100%;
 top: 0;
@@ -1181,7 +1186,7 @@ background: #61a946;
 .rentalcar__title h2::after{
 	content:"";
 position: absolute;
-right: 45px;
+margin-left: 7px;
 width: 4px;
 height: 100%;
 top: 0;

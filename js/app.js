@@ -457,7 +457,7 @@ if (document.body.classList.contains('_touch')) {
 }
 	//!------------------- анимация цифр в блоке clients-----------------------------
 // Получаем нужный элемент
-var element = document.querySelector('.clients__wraper');
+/* var element = document.querySelector('.clients__wraper');
 
 var Visible = function (target) {
   // Все позиции элемента
@@ -494,10 +494,10 @@ var Visible = function (target) {
 // Запускаем функцию при прокрутке страницы
 window.addEventListener('scroll', function() {
   Visible (element);
-});
+}); */
 
 // А также запустим функцию сразу. А то вдруг, элемент изначально видно
-Visible(element);
+/* Visible(element); */
 
 
 /* let number = document.querySelector('.number');
