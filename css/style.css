@@ -2438,6 +2438,10 @@ body.lock {
 	 justify-content: center;
 	 padding:50px 0px 50px 0px;
  }
+ .items-form__wraper.delmargin{
+	padding:10px 0px 0px 0px;
+	margin-bottom: -50px;
+ }
  .contact-form__input-wrapper{
 	 display: flex;
 	 align-items: center;

@@ -417,17 +417,21 @@ function getArrayOfTheCarDescr(arrayDescription) {
 	
 	} 
 /*------------------------------------------------- */
-
+const wraperItems = document.getElementsByClassName('items-form__wraper');  
 	const form = document.getElementById('form-contact');
 console.log(form);
 const wraperInput = document.getElementsByClassName('contact-form__input-wrapper');
 const formB = document.getElementsByClassName('contact-form__input_car');
-form.addEventListener('focusin', function (event) { 
-console.log(wraperInput.length);
-
-	for (let i = 0; i < wraperInput.length; i++) {
-		wraperInput[i].classList.toggle('delmargin');
-	 }
+	form.addEventListener('focusin', function (event) { 
+		console.log(wraperInput.length);
+		console.log(wraperItems);
+		for (let i = 0; i < wraperItems.length; i++) {
+			wraperItems[i].classList.add('delmargin');
+		 }
+		
+			for (let i = 0; i < wraperInput.length; i++) {
+					wraperInput[i].classList.add('delmargin');
+	 			}
 	/* const animItemHeight = form.offsetHeight;
 	console.log(animItemHeight);
 	window.scrollBy({
