@@ -2163,6 +2163,10 @@ body.lock {
 	}
  }
  @media (max-width: 460px) {
+	.popup__close {
+		right: 5px;
+		top: 5px;
+	 }
 	.close__description {
 	  position: absolute;
 	  right: 20px;
