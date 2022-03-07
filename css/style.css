@@ -1441,6 +1441,12 @@ margin: 20px 20px 20px 20px;
 	min-width: 0;
 	
 }
+@media(max-width:768px){
+	.equipment-slider {
+		margin-top: -50px;
+		
+	}
+}
 .slick-slider{
 	min-width: 0;
 }
@@ -1535,6 +1541,11 @@ filter: grayscale(100%);
 	position: relative;	
 	max-height: 400px;
 	min-width: 0;
+}
+@media(max-width:768px){
+	.equipment__text-slider {
+	margin-top: -5px;
+	}
 }
 .text-slider__item {
 	display: flex;
