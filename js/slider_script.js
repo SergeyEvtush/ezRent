@@ -11,12 +11,18 @@ $(document).ready(function () {
 		initialSlide:1,
 		pauseOnHover: false,
 		touchThreshold: 7,
+		asNavFor:".equipment__text-slider",
 		responsive: [
 			{
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					arrows: false,
+					autoplaySpeed: 1000,
+					initialSlide: 1,
+					centerMode: true,
+					pauseOnHover: false,
+					touchThreshold: 7,
 				}
 			}
 		],
@@ -32,6 +38,11 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplaySpeed: 1000,
 		touchThreshold: 7,
+	});
+	$('.equipment__text-slider').slick({
+		asNavFor:".equipment-slider",
+		arrows: false,
+		
 	});
 });
 /*https://youtu.be/rXNfDfqtM3M?t=2992 */
