@@ -2098,7 +2098,7 @@ body.lock {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 30px 10px 0px 10px;
+	padding: 10px 10px 0px 10px;
 /* 	overflow: hidden; */
 	position: relative;
 	
@@ -2112,7 +2112,7 @@ body.lock {
 	 
 	min-height: 100%;
 	max-width: 100%;
-	padding: 30px;
+	padding: 10px 30px;
 	display: flex;
 	align-items: flex-start;
 	position: relative;
@@ -2446,7 +2446,7 @@ body.lock {
 	 flex-direction: column;
 	 align-items: center;
 	 justify-content: center;
-	 padding:50px 0px 50px 0px;
+	 padding:20px 0px 20px 0px;
  }
  
  .contact-form__input-wrapper{
@@ -2455,8 +2455,8 @@ body.lock {
 	 flex-direction: column;
 	 justify-content: center;
 	 max-width: 100%;
-	 margin:0px 0px 20px 0px;
-	 padding:10px 50px 10px 50px;
+	 margin:0px 0px 10px 0px;
+	 padding:5px 50px 5px 50px;
  }
  .contact-form__input-wrapper.delmargin{
 	margin:0px 0px 0px 0px;
@@ -2513,7 +2513,7 @@ padding:30px 0px;
 	text-align: center;
 	color: #60ad45;
 	font-size: 18px;
-	margin: 0 0 30px;
+	margin: 0 0 15px;
  }
  .contact-form__input-wrapper.delmargin{
 		
@@ -2528,7 +2528,7 @@ padding:30px 0px;
  }
  @media (max-width: 430px) {
 	.contact-form__title {
-	  font-size: 16px;
+	 
 	  margin: 0 0 15px 0px;
 	}
  }
@@ -2640,8 +2640,6 @@ padding:30px 0px;
 	  padding: 30px 15px;
 	}
 	
-	.contact-form__title {
-	  font-size: 16px;
-	}
+	
  }
  /*------------------------------------------------------*/
