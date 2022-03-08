@@ -5,6 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png">
+<link rel="manifest" href="files/favicon/site.webmanifest">
+<link rel="mask-icon" href="files/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#ffffff">
+
+
 	<title>Eazy Rent</title>
 </head>
 <body>
@@ -14,10 +23,10 @@
 	<div class="header__info lock-padding">
 		<div class="info__container __container">
 			<div class="info__item">
-				<a href="#" class="item__link _phone">+7(963)-299-54-47</a>
+				<a href="tel:+79632995447" class="item__link _phone">+7(963)-299-54-47</a>
 			</div>
-			<div class="info__item"><a href="#" class="item__link _email">eazy-rent3@mail.ru</a></div>
-			<div class="info__item"><a href="#" class="item__link _operating">Режим работы: с 9.00 - 21.00 без выходных</a></div>
+			<div class="info__item"><a href="mailto:eazy-rent3@mail.ru?subject=заявка на аренду авто" class="item__link _email">eazy-rent3@mail.ru</a></div>
+			<div class="info__item"><a href="#" class="item__link _operating menu__link " data-goto=".wraper__footer-container">Режим работы: с 9.00 - 21.00 без выходных</a></div>
 		</div>
 	</div>
 	<div class="title__header lock-padding">
@@ -36,7 +45,7 @@
 			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link link-style" data-goto=".information__wraper">FAQ</a></li>
 			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link link-style" data-goto=".reviews__container">Отзывы</a></li>
 			<li class="menu__list-item"><a href="#" class="header__menu-link menu__link link-style" data-goto=".wraper__footer-container">Контакты </a></li>
-			
+			<li class="menu__list-item equip"><a href="#" class="header__menu-link menu__link link-style" data-goto=".additional-equipment__wraper">Дополнительное оборудование</a></li>
 		</ul>
 	</nav>
 </div>
@@ -84,7 +93,6 @@
 			<div class="advatanges __container">
 				<div class="advantages__content">
 					<h2 class="advantages__title sale__title _anim-items">приемущества</h2>
-					<!-- <h2 class="advantages__title">Почему у нас выгоднее?</h2> -->
 					<div class="advantages__cards-block ">
 <div class="card-block__item _anim-items">
 	<div class="card-block__image"><img src="img/advantages/dollar.png" alt=""></div>
@@ -92,9 +100,6 @@
 		<h4 class="block-content__title">Выгодно</h4>
 		<ul class="block-content__list">
 			<li class="content-list__item">Получение и возврат автомобилей в аэропорту бесплатно!</li>
-			<!-- <li class="content-list__item">Пробег без ограничений!</li>
-			<li class="content-list__item">Гибкая система скидок!</li> -->
-			
 		</ul>
 	</div>
 </div>
@@ -195,7 +200,6 @@
 			<div class="images__container _anim-items">
 	<div class="image__block-carrental" id="clone">
 		<div class="image__item" >
-			<img src="files/rentalcars/kiaRio2.webp" alt="car">
 		</div>
 		<div class="description__block">
 			<div class="description__title">
@@ -203,11 +207,11 @@
 			</div>
 			<div class="description__car">
 	<ul class="car__list-description" id="list">
-	<li class="item__car-list">Год: 2015</li>
-	<li class="item__car-list">Автомат</li>
-	<li class="item__car-list">270 км/ч</li>
-	<li class="item__car-list">Пробег: 30000км</li>
-	<li class="item__car-list">Расход: 7л на 100км</li>
+	<li class="item__car-list"> Год: 2015</li>
+	<li class="item__car-list"> Автомат </li>
+	<li class="item__car-list"> 270 км/ч </li>
+	<li class="item__car-list"> Пробег: 30 000км</li>
+	<li class="item__car-list"> Расход: 7л на 100км </li>
 	</ul>
 			</div>
 			<div class="rental__btn">
@@ -261,7 +265,7 @@
 				</div>
 				<div class="item-description-equipment">
 					<p class="description-equipment__text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati non impedit pariatur ea deserunt sunt ab sint magnam voluptatum corrupti, aut soluta eos provident aliquam architecto id quidem iure!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit 
 					</p>
 				</div>
 		</div>
@@ -271,7 +275,7 @@
 			</div>
 			<div class="item-description-equipment">
 				<p class="description-equipment__text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati non impedit pariatur ea deserunt sunt ab sint magnam voluptatum corrupti, aut soluta eos provident aliquam architecto id quidem iure!
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit 
 				</p>
 			</div>
 	  </div>
@@ -281,7 +285,7 @@
 		</div>
 		<div class="item-description-equipment">
 			<p class="description-equipment__text">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati non impedit pariatur ea deserunt sunt ab sint magnam voluptatum corrupti, aut soluta eos provident aliquam architecto id quidem iure!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati non impedit pariatur ea deserunt sunt ab sint magnam
 			</p>
 		</div>
 		</div>
@@ -291,7 +295,7 @@
 	</div>
 	<div class="item-description-equipment">
 		<p class="description-equipment__text">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati non impedit pariatur ea deserunt sunt ab sint magnam voluptatum corrupti, aut soluta eos provident aliquam architecto id quidem iure!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati non 
 		</p>
 	</div>
 		</div>
@@ -301,7 +305,7 @@
 			</div>
 			<div class="item-description-equipment">
 				<p class="description-equipment__text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati non impedit pariatur ea deserunt sunt ab sint magnam voluptatum corrupti, aut soluta eos provident aliquam architecto id quidem iure!
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati non impedit pariatur ea deserunt sunt ab sint magnam 
 				</p>
 			</div>
 				</div>
@@ -395,16 +399,33 @@
 			<div class="item__reviews-slider">
 				<div class="item__container">
 					<div class="image__review">
-						<img src="img/reviews/acter.jpg" alt="user">
+						<img src="img/reviews/user1.jpg" alt="user">
 					</div>	
 					<div class="description__review">
 						<div class="title__description">
-<h4>Владимир береза </h4><span>брал солярис 2020</span>
+<h4>ВАЛЕРИЯ</h4><span>брала Hyundai Solaris 2020</span>
 						</div>
 <div class="text__description">
 	<p>
-	
-		С другой стороны дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности способствует подготовки и реализации модели развития.
+		Все прошло отлично. Ответили быстро, подробно, автомобиль в отличном техническом состоянии, чистый, новый. Описание соответствует реальности. Цена приятная! Спасибо большое за вашу честность, оперативность!
+	</p>
+</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="item__reviews-slider">
+				<div class="item__container">
+					<div class="image__review">
+						<img src="img/reviews/user2.jpg" alt="user">
+					</div>	
+					<div class="description__review">
+						<div class="title__description">
+<h4>Владислав</h4><span>брал Kia Rio 2021</span>
+						</div>
+<div class="text__description">
+	<p>
+		Арендовали авто на автомате, пробег почти нулевой. Соответственно машинка без нареканий. Списались за неделю, забронировали без каких либо проблем и предоплат. Встретил нас Сергей. Все показал, рассказал. Брали на 5 дней, залог вернули при сдаче авто! Рекомендую эту компанию!
 	</p>
 </div>
 					</div>
@@ -413,16 +434,15 @@
 			<div class="item__reviews-slider">
 				<div class="item__container">
 					<div class="image__review">
-						<img src="img/reviews/acter1.jpg" alt="user">
+						<img src="img/reviews/user3.jpg" alt="user">
 					</div>	
 					<div class="description__review">
 						<div class="title__description">
-<h4>Владимир береза </h4><span>брал солярис 2020</span>
+<h4>АЛЛА</h4><span>брала Hyundai Solaris 2020</span>
 						</div>
 <div class="text__description">
 	<p>
-	
-		С другой стороны дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности способствует подготовки и реализации модели развития.
+		Отличный сервис. Все четко и вовремя. Машина в хорошем состоянии.
 	</p>
 </div>
 					</div>
@@ -431,16 +451,15 @@
 			<div class="item__reviews-slider">
 				<div class="item__container">
 					<div class="image__review">
-						<img src="img/reviews/acter_3.jpg" alt="user">
+						<img src="img/reviews/user4.jpg" alt="user">
 					</div>	
 					<div class="description__review">
 						<div class="title__description">
-<h4>Владимир береза </h4><span>брал солярис 2020</span>
+<h4>Наталья</h4><span>брала Hyundai Solaris 2021</span>
 						</div>
 <div class="text__description">
 	<p>
-	
-		С другой стороны дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности способствует подготовки и реализации модели развития.
+		Собираясь в отпуск долго искали авто. Много нюансов отталкивало. С этой компанией у нас сложились добрые отношения. Всё доступно объяснили. Забронировали машину на три дня. Машина в идеальном техническом и эстетическом состоянии. Снимали авто в аэропорту, там же и сдавали(очень удобно) с возвратом проблем нет. В следующем году прилетим и только к вам!!! Спасибо за всё!!! Процветания и расширения!!!
 	</p>
 </div>
 					</div>
@@ -449,16 +468,15 @@
 			<div class="item__reviews-slider">
 				<div class="item__container">
 					<div class="image__review">
-						<img src="img/reviews/gitler.jpg" alt="user">
+						<img src="img/reviews/user5.jpg" alt="user">
 					</div>	
 					<div class="description__review">
 						<div class="title__description">
-<h4>Владимир береза </h4><span>брал солярис 2020</span>
+<h4>Алексей</h4><span>брал Kia Rio 2021</span>
 						</div>
 <div class="text__description">
 	<p>
-	
-		С другой стороны дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности способствует подготовки и реализации модели развития.
+		Все ясно, четко, понятно. Встретили, как и договаривались в обозначенное время. Документы были все подготовлены заранее. Передача машины была быстрой. Произвели осмотр, рассказали основные моменты. Машина подана чистой и в идеальном состоянии. Спасибо, что позаботились о нашем комфорте: влажные салфетки, провод для зарядки телефона очень выручили. Также в машине был приготовлен дождевик и пляжный зонт. Хочется еще поблагодарить за координаты мест, куда стоит съездить и где побывать. Спасибо за высокий уровень сервиса и уровень заботы о клиентах! Рекомендую!
 	</p>
 </div>
 					</div>
@@ -467,16 +485,15 @@
 			<div class="item__reviews-slider">
 				<div class="item__container">
 					<div class="image__review">
-						<img src="img/reviews/acter_4.jpg" alt="user">
+						<img src="img/reviews/user6.jpg" alt="user">
 					</div>	
 					<div class="description__review">
 						<div class="title__description">
-<h4>Владимир береза </h4><span>брал солярис 2020</span>
+<h4>Евгений</h4><span>брал Kia Rio 2021</span>
 						</div>
 <div class="text__description">
 	<p>
-	
-		С другой стороны дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности способствует подготовки и реализации модели развития.
+		Все очень понравилось. Не ожидал, что сервис будет на таком высоком уровне. Подача и прием авто в нужное мне время в аэропорту. Чистый,новый авто. Влажные салфетки и Type-C провод в салоне. Магнитола с Android-Auto.
 	</p>
 </div>
 					</div>
@@ -497,8 +514,8 @@
 				</a>
 			</div>
 			<div class="row__contacts">
-				<a href="" class="link__contacts contacts_link">8(963)299-54-47</a>
-				<a href="" class="link__contacts post_link">eazy-rent3@mail.ru</a>
+				<a href="href=tel:+79632995447" class="link__contacts contacts_link">8(963)299-54-47</a>
+				<a href="mailto:eazy-rent3@mail.ru?subject=заявка на аренду авто" class="link__contacts post_link">eazy-rent3@mail.ru</a>
 			</div>
 	</div>
 	<div class="item__footer-container">
@@ -524,7 +541,9 @@
 
 </div>
 <div class="map">
-	
+	<!-- вставил свою карту -->
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.5257593825927!2d20.49309041602322!3d54.96387856002523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e345c8fa737fd3%3A0x36932b27aedb157!2sES-prokat!5e0!3m2!1sru!2sru!4v1642464226603!5m2!1sru!2sru" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	<!-- ///////// -->
 <!-- 	<iframe src="https://maps.googleapis.com/maps/api/staticmap?key=YOUR_API_KEY&center=54.877646086622335,20.649455581462338&zoom=11&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.land_parcel%7Celement:geometry%7Ccolor:0x141313&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x60ad45&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:geometry.fill%7Ccolor:0x000000&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d&size=100%x360" width="100%" height="450px" frameborder="0" loading="lazy"> </iframe> -->
 </div>
 <p>
