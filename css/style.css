@@ -151,14 +151,14 @@ transform: translate(100%);
 }
 
 ._phone{
-  background: url(../img/topHeaderImg/phone_1.png) 0 0/16px no-repeat; 
+  background: url(../files/icons/topHeader_icons/phone_1.png) 0 0/16px no-repeat; 
   text-transform: uppercase;
 }
 ._email{
-  background: url(../img/topHeaderImg/email_2.png) 0 0/16px no-repeat; }
+  background: url(../files/icons/topHeader_icons/email_2.png) 0 0/16px no-repeat; }
 
 ._operating{
-  background: url(../img/topHeaderImg/watches_1.png) 0 0/16px no-repeat;
+  background: url(../files/icons/topHeader_icons/watches_1.png) 0 0/16px no-repeat;
   text-transform: uppercase;
 }
 
@@ -788,7 +788,7 @@ form > .btn__link {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: url(../img/quessions/phone_1.png) center/20px no-repeat;
+  background: url(../files/icons/quessions_icons/phone_1.png) center/20px no-repeat;
   padding: 0px 10px 5px 0px;
   position: absolute;
   top: -2px;
