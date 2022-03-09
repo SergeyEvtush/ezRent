@@ -2541,23 +2541,12 @@ animation: preloader_after 1.8s infinite cubic-bezier(0.4, 0, 0.2, 1);
 	color: #FFF;
 	padding: 2px 16px 0 30px;
 }
-/* /* Оформляем нижнюю строку */
-/*  .map-container .map-info {
-	display: flex;
-	background: #337AB7;
-	color: #FFF;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	font: 16px/24px Arial,sans-serif;
-}  */
  .map-container .map-info div {
 	padding: 10px 12px 4px;
 }
-/* .map-container .map-info a {
-	color: #FFF;
-	text-decoration: none;
-	padding-left: 6px;
-}  */
 .ymaps-2-1-79-zoom,.ymaps-2-1-79-zoom__minus{
 	margin-top: 60px;
+}
+.ymaps-2-1-79-gototech{
+	display: none;
 }
