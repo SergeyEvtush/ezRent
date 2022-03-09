@@ -203,7 +203,9 @@ transform: translate(100%);
   padding:5px 0px 0px 0px;
 
 }
-
+.equip{
+	display: none;
+}
 .menu__list-item:not(:last-child) {
   margin: 0px 25px 0px 0px;
 }
@@ -245,7 +247,9 @@ position: relative;
 
 }
 @media(max-width:768px){
-	
+	.equip{
+		display: block;
+	}
 	.item__content {
 		margin-top: 60px;
 	position: relative;
