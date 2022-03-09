@@ -302,6 +302,8 @@ position: relative;
   color: #fff;
   display: none;
 }
+
+
 @media(max-width:768px){
 	.watsap__link{
 	
@@ -310,7 +312,7 @@ position: relative;
 }
 .watsap__link img{
 	width: 30px;
-	margin:0px 10px 0px 0px;
+	margin: -10px 10px 0px 0px;
 	
 }
 @media(max-width:1200px){
@@ -787,6 +789,7 @@ form > .btn__link {
 
 .questions__link:first-child{
 	padding: 0px 60px 0px 20px;
+	position: relative;
 }
 
 
@@ -798,7 +801,17 @@ form > .btn__link {
   height: 20px;
   background: url(../img/quessions/phone_1.png) center/20px no-repeat;
   padding: 0px 10px 5px 0px;
+  position: absolute;
+  top: -2px;
+  left: 0;
 } 
+@media(max-width:767px){
+	.questions__link:first-child::before {
+		
+		top: 0px;
+		left: 25px;
+	 }
+}
 .questions-container__image {
 position: absolute;
 max-width: 100px;
@@ -2056,6 +2069,8 @@ color: #222222;}
 	justify-content: center;
 	background: linear-gradient(45deg, #141313 25%, transparent 25%, transparent 75%, #111111 75%), linear-gradient(45deg, #1a1919 25%, transparent 25%, transparent 75%, #111111 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #22221e, #0e0d0d);
 	background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
+	position: relative;
+	z-index: 20;
 }
 .item__footer-container {
 	padding:70px 60px 70px 60px;
@@ -2088,6 +2103,9 @@ flex: 0 1 33.333%;
 	.item__footer-container:nth-child(2) {
 		border-right:none;
 		border-left:none;
+	}
+	.item__footer-container:last-child {
+		padding:40px 20px 40px 20px;
 	}
 }
 .icon-row__contacts {
@@ -2734,3 +2752,101 @@ padding:30px 0px;
 	
  }
  /*------------------------------------------------------*/
+ /*стили карты*/
+ .map-container{
+	 margin-top:-5%;
+ }
+ .map-container .ymaps-2-1-79-ground-pane {
+	filter: grayscale(1);
+	-ms-filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}
+
+.map-container .ymaps-2-1-79-ground-pane /* .tn-elem__2136261151595382795100 */ {
+	mix-blend-mode: difference;
+	pointer-events: none;
+	
+} 
+
+/* Убираем лишнии кнопки и ползунок масштаба */
+.map-container .ymaps-2-1-79-controls__toolbar_right,
+.map-container .ymaps-2-1-79-controls__toolbar_left,
+.map-container .ymaps-2-1-79-zoom__scale {
+    display: none;
+}
+/* Оформляем кнопки плюс и минус */
+.map-container .ymaps-2-1-79-float-button {
+	 background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);;
+	
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.1);
+}
+.map-container .ymaps-2-1-79-float-button-icon {
+	border: 0;
+	width: 22px;
+	height: 22px;
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}
+
+
+
+
+.map-container .ymaps-2-1-79-float-button:hover .ymaps-2-1-79-float-button-icon {
+	opacity: 1;
+}
+.map-container .ymaps-2-1-79-zoom {
+	transform: scale(1.5);
+	height: 10px!important;
+}
+.map-container .ymaps-2-1-79-controls__control {
+	inset: 36px auto auto 30px!important;
+}
+.map-container .ymaps-2-1-79-zoom__plus .ymaps-2-1-79-zoom__icon {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M11 15H6v-4h5V6h4v5h5v4h-5v5h-4v-5zm0 0'/%3e%3c/svg%3e");
+	background-size: 16px 16px;
+}
+.map-container .ymaps-2-1-79-zoom__minus .ymaps-2-1-79-zoom__icon {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M6 11h14v4H6z'/%3e%3c/svg%3e");
+	background-size: 16px 16px;
+}
+/* Оформляем балун */
+.map-container .ymaps-2-1-79-balloon__content {
+	font: 15px/24px Arial,sans-serif;
+	color: #FFF;
+	padding: 8px 8px 8px 16px;
+}
+.map-container .ymaps-2-1-79-balloon__layout,
+.map-container .ymaps-2-1-79-balloon__content, 
+.map-container .ymaps-2-1-79-balloon__tail::after {
+	background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
+}
+.map-container .ymaps-2-1-79-balloon__close-button {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M14 .7l-.7-.7L7 6.3.7 0 0 .7 6.3 7 0 13.3l.7.7L7 7.7l6.3 6.3.7-.7L7.7 7z' clip-rule='evenodd'/%3e%3c/svg%3e");
+	opacity: 1;
+	height: 30px;
+}
+.map-container .ymaps-2-1-79-islets_icon-caption {
+ background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
+	font: 16px/24px Arial,sans-serif;
+	color: #FFF;
+	padding: 2px 16px 0 30px;
+}
+/* /* Оформляем нижнюю строку */
+/*  .map-container .map-info {
+	display: flex;
+	background: #337AB7;
+	color: #FFF;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font: 16px/24px Arial,sans-serif;
+}  */
+ .map-container .map-info div {
+	padding: 10px 12px 4px;
+}
+/* .map-container .map-info a {
+	color: #FFF;
+	text-decoration: none;
+	padding-left: 6px;
+}  */

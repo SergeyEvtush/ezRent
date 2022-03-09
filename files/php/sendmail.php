@@ -1,10 +1,10 @@
 <?php
 
 // Токен
-  const TOKEN =  "5179483241:AAEWygwaLCvrkx3JmGQH-7KNlD1mAL-QFBg";
+  const TOKEN =  "5245832242:AAGz6pQkce8PW-wukY-ZKRjfPayEosekChE";
 
   // ID чата
-  const CHATID = "1287954959";
+  const CHATID = "2126952477";
 
   
 
