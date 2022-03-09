@@ -306,13 +306,17 @@ position: relative;
 
 @media(max-width:768px){
 	.watsap__link{
-	
+		
+	  display: block;
+	}
+	.watsap__link{
+		
 	  display: block;
 	}
 }
 .watsap__link img{
 	width: 30px;
-	margin: -10px 10px 0px 0px;
+	margin: -6px 10px 0px 0px;
 	
 }
 @media(max-width:1200px){
@@ -324,7 +328,7 @@ position: relative;
 }
 .bg__block-content{
 	background: rgba(0, 0, 0, 0.397);
-	padding:0px 10px;
+	padding:5px 10px 0px;
 }
 .content__title {
 
