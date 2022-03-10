@@ -37,9 +37,7 @@ const imageBlock = document.getElementById("image");
 if (screenWidth >= 1200) {
 	document.getElementById("image").src = `img/SliderMain/Rio_pc.jpg`;
 }
-/* else if (screenWidth < 1200 && screenWidth > 768) { 
-	document.getElementById("image").src  = `img/SliderMain/Rio800.jpg`;
-} */
+
 else if (screenWidth < 430 ) { 
 	document.getElementById("image").src  = `img/SliderMain/Riomob.jpg`;/*  */
 }
