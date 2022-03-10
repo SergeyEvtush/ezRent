@@ -1661,7 +1661,7 @@ margin:0px auto 0px auto;
 counter-reset:list1 0;
 }
 .center__item{
-max-width: 100%;
+width: 100%;
 position: relative;
 margin:0px 0px 1px 0px;
 }
@@ -1688,8 +1688,9 @@ font-family: 'Ubuntu', sans-serif;
   	color: #2121219b;
  	width: 100%;
 	max-height: 0;
+	min-height: 100%;
 	padding:0px 0px 0px 0px;
-	overflow: auto;
+	overflow-y: auto;
 	transition: max-height 0.3s ease-out;
 
 }
@@ -1713,14 +1714,15 @@ margin: 0px auto 0px auto;
 }
 .active::before{
 background: linear-gradient(225deg, #60ad45 60%, #97c73d 97%);
-}
+z-index: 50;
+}	
+
 .panel p{
 text-align: left;
-padding:0px 10px 20px 60px;
+padding:5px 0px 5px 60px;
 line-height: 1.5;
 background: #fff;
 }
-
 @media(max-width:768px){
 	.tab__block {
 		margin:0;  
@@ -1753,15 +1755,17 @@ background: #fff;
 	padding-right: 0px;
 }
 .panel {
-	padding: 0 0px 0 0px;
-	width: 100%;
-	
+padding:0px;
+width: 100%;
+}
+.panel.active{
+	height: 150%;
 }
 .panel p{
-	text-align: left;
-	padding:0px 5px 20px 60px;
-	line-height: 1.5;
-	width: 100%;
+text-align: left;
+padding:0px 5px 20px 60px;
+line-height: 1.5;
+width: 100%;
 }
 }
 
